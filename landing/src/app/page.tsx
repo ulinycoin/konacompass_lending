@@ -44,6 +44,8 @@ function Divider() {
   return <div className="h-px w-full bg-white/10" />;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Home() {
   return (
     <main id="main-content" className="bg-[#050b11] text-white">
@@ -52,7 +54,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <div className="relative h-11 w-14 overflow-hidden rounded-sm bg-white/95">
               <Image
-                src="/konacompas-old/logo.png"
+                src={`${basePath}/konacompas-old/logo.png`}
                 alt="Kona Compass logo"
                 fill
                 className="object-contain p-1"
@@ -80,7 +82,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.18),rgba(3,7,18,0.70))]" />
         <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
           <Image
-            src="/konacompas-old/image-3.png"
+            src={`${basePath}/konacompas-old/image-3.png`}
             alt="Kona Compass product image"
             fill
             className="object-cover object-center"
@@ -146,7 +148,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:items-center">
           <div className="relative min-h-[560px] overflow-hidden bg-slate-900">
             <Image
-              src="/konacompas-old/image-4.png"
+              src={`${basePath}/konacompas-old/image-4.png`}
               alt="Kona Compass installed in a real fishing setup"
               fill
               className="object-cover"
@@ -238,7 +240,7 @@ export default function Home() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="relative min-h-[210px] overflow-hidden border border-white/10 bg-slate-900">
                   <Image
-                    src="/konacompas-old/image-5.png"
+                    src={`${basePath}/konacompas-old/image-5.png`}
                     alt="Kona Compass close-up detail"
                     fill
                     className="object-cover"
@@ -246,7 +248,7 @@ export default function Home() {
                 </div>
                 <div className="relative min-h-[210px] overflow-hidden border border-white/10 bg-slate-900">
                   <Image
-                    src="/konacompas-old/image-4.png"
+                    src={`${basePath}/konacompas-old/image-4.png`}
                     alt="Kona Compass in use on a boat"
                     fill
                     className="object-cover"
@@ -343,7 +345,7 @@ export default function Home() {
 
             <div className="relative min-h-[420px] overflow-hidden bg-slate-900">
               <Image
-                src="/konacompas-old/image-5.png"
+                src={`${basePath}/konacompas-old/image-5.png`}
                 alt="Kona Compass detail image"
                 fill
                 className="object-cover"
@@ -361,7 +363,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <div className="relative h-10 w-14 overflow-hidden rounded-sm bg-white/95">
                 <Image
-                  src="/konacompas-old/logo.png"
+                  src={`${basePath}/konacompas-old/logo.png`}
                   alt="Kona Compass logo"
                   fill
                   className="object-contain p-1"

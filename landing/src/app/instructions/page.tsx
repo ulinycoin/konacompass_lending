@@ -38,6 +38,8 @@ const tips = [
   "Use a wider search sector when covering more water.",
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function InstructionsPage() {
   return (
     <main className="min-h-screen bg-[#050b11] text-white">
@@ -46,7 +48,7 @@ export default function InstructionsPage() {
           <div className="flex items-center gap-4">
             <div className="relative h-11 w-14 overflow-hidden rounded-sm bg-white/95">
               <Image
-                src="/konacompas-old/logo.png"
+                src={`${basePath}/konacompas-old/logo.png`}
                 alt="Kona Compass logo"
                 fill
                 className="object-contain p-1"
@@ -97,7 +99,7 @@ export default function InstructionsPage() {
 
           <div className="relative min-h-[360px] overflow-hidden bg-slate-900">
             <Image
-              src="/konacompas-old/image-5.png"
+              src={`${basePath}/konacompas-old/image-5.png`}
               alt="Kona Compass controls overview"
               fill
               className="object-cover"
@@ -252,7 +254,7 @@ export default function InstructionsPage() {
 
           <div className="relative min-h-[360px] overflow-hidden bg-slate-900">
             <Image
-              src="/konacompas-old/image-6.png"
+              src={`${basePath}/konacompas-old/image-6.png`}
               alt="Kona Compass support and real-world use image"
               fill
               className="object-cover"
@@ -267,7 +269,7 @@ export default function InstructionsPage() {
             <div className="flex items-center gap-4">
               <div className="relative h-10 w-14 overflow-hidden rounded-sm bg-white/95">
                 <Image
-                  src="/konacompas-old/logo.png"
+                  src={`${basePath}/konacompas-old/logo.png`}
                   alt="Kona Compass logo"
                   fill
                   className="object-contain p-1"
