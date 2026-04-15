@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 
 const modes = [
   {
@@ -40,13 +42,59 @@ const tips = [
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+function WaitlistForm({ className = "" }: { className?: string }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setTimeout(() => {
+      console.log("Submitted email:", email);
+      setStatus("success");
+    }, 1000);
+  };
+
+  if (status === "success") {
+    return (
+      <div className={`rounded-lg border border-cyan-500/30 bg-cyan-500/10 p-4 text-cyan-100 ${className}`}>
+        <p className="font-medium">You're on the list!</p>
+        <p className="mt-1 text-sm opacity-80">We'll notify you as soon as production starts.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className={`flex flex-col gap-3 sm:flex-row sm:items-center ${className}`}>
+      <div className="relative flex-grow">
+        <input
+          type="email"
+          required
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:border-cyan-500/50 focus:bg-white/10"
+        />
+      </div>
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition hover:bg-cyan-500 disabled:opacity-50 whitespace-nowrap"
+      >
+        {status === "loading" ? "Joining..." : "Join Waitlist"}
+      </button>
+    </form>
+  );
+}
+
 export default function InstructionsPage() {
   return (
-    <main className="min-h-screen bg-[#050b11] text-white">
-      <header className="border-b border-white/10 bg-[#071019]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4">
-            <div className="relative h-11 w-14 overflow-hidden rounded-sm bg-white/95">
+    <main className="min-h-screen bg-[#050b11] text-white font-sans selection:bg-cyan-500/30">
+      {/* Navigation */}
+      <header className="border-b border-white/5 bg-[#050b11]/80 backdrop-blur-md sticky top-0 z-50">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
+          <a href="/" className="flex items-center gap-4 group">
+            <div className="relative h-9 w-12 overflow-hidden rounded-sm bg-white/95 transition group-hover:bg-white">
               <Image
                 src={`${basePath}/konacompas-old/logo.png`}
                 alt="Kona Compass logo"
@@ -55,261 +103,197 @@ export default function InstructionsPage() {
                 priority
               />
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-white/70">
-                Kona Compass
-              </p>
-              <p className="mt-1 text-sm text-white/45">User Manual</p>
-            </div>
-          </div>
-
-          <nav className="flex items-center gap-6 text-sm text-white/65">
-            <Link href="/" className="transition hover:text-white">
-              Main page
-            </Link>
-            <a
-              href="#support"
-              className="transition hover:text-white"
-            >
-              Support
-            </a>
-            <a
-              href="mailto:konacompas@gmail.com"
-              className="transition hover:text-white"
-            >
-              Contact
-            </a>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">Kona Compass</p>
+          </a>
+          <nav className="flex items-center gap-6">
+            <a href="/specs" className="text-xs font-medium uppercase tracking-widest text-white/40 hover:text-white transition">Specs</a>
+            <a href="/compare" className="text-xs font-medium uppercase tracking-widest text-white/40 hover:text-white transition">Compare</a>
+            <a href="/" className="text-xs font-medium uppercase tracking-widest text-white/40 hover:text-white transition">Home</a>
+            <a href="#waitlist" className="rounded-full bg-cyan-600/10 border border-cyan-500/30 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-400 hover:bg-cyan-600/20 transition">Join Waitlist</a>
           </nav>
         </div>
       </header>
 
-      <section className="border-b border-white/10 bg-[#071019] py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:items-end">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Instructions
-            </p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl">
-              User Manual
-            </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-9 text-white/72">
-              A practical guide to the main Kona Compass controls, operating modes, and adjustment logic.
-            </p>
-          </div>
+      {/* Hero Section */}
+      <section className="py-20 lg:py-28 border-b border-white/5 bg-[radial-gradient(circle_at_50%_50%,rgba(8,145,178,0.05)_0%,transparent_70%)]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-cyan-500 font-bold mb-6">User Manual</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl max-w-4xl mx-auto">
+            Operational Guidance.
+          </h1>
+          <p className="mt-8 text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
+            A practical and definitive guide to the main Kona Compass controls, operating modes, and adjustment logic for real-world use.
+          </p>
+        </div>
+      </section>
 
-          <div className="relative min-h-[360px] overflow-hidden bg-slate-900">
+      {/* Visual Overview */}
+      <section className="py-12 border-b border-white/5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <Image
-              src={`${basePath}/konacompas-old/image-5.png`}
+              src={`${basePath}/product/kona1.jpg`}
               alt="Kona Compass controls overview"
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050b11]/80 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8">
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan-400 font-bold">Interface Overview</p>
+              <h2 className="text-2xl font-semibold text-white mt-2">Control logic at a glance.</h2>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.78fr_1.22fr] lg:px-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Quick start
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              Start simple, then adjust with confidence.
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-lg leading-9 text-white/72">
-            {quickStart.map((item) => (
-              <p key={item}>{item}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-[#071019] py-16 sm:py-24">
+      {/* Quick Start & Modes */}
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Operating modes
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              Core modes and how to activate them.
-            </h2>
-          </div>
+          <div className="grid gap-20 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-bold mb-6">Basics</p>
+              <h2 className="text-3xl font-semibold text-white">Quick Start.</h2>
+              <div className="mt-8 space-y-6">
+                {quickStart.map((item, idx) => (
+                  <div key={idx} className="flex gap-4">
+                    <span className="text-cyan-500 font-bold text-sm">0{idx + 1}</span>
+                    <p className="text-white/60 leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-16 p-8 rounded-2xl border border-white/5 bg-white/[0.02]">
+                <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-4">Practical Use Tips</h3>
+                <ul className="space-y-4">
+                  {tips.map((tip, idx) => (
+                    <li key={idx} className="flex gap-3 items-start">
+                      <svg className="h-4 w-4 text-cyan-500 mt-1 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-white/40 text-sm leading-relaxed">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-          <div className="mt-12 border-t border-white/10">
-            {modes.map((mode) => (
-              <div key={mode.title} className="grid gap-5 border-b border-white/10 py-8 lg:grid-cols-[0.78fr_1.22fr]">
-                <div>
-                  <h3 className="text-2xl font-medium text-white">{mode.title}</h3>
-                  <p className="mt-3 text-sm uppercase tracking-[0.22em] text-white/42">
-                    {mode.activation}
-                  </p>
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-bold mb-6">Intelligence</p>
+              <h2 className="text-3xl font-semibold text-white mb-10">Operating Modes.</h2>
+              <div className="grid gap-6">
+                {modes.map((mode) => (
+                  <div key={mode.title} className="group p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition">
+                    <div className="flex justify-between items-baseline mb-4">
+                      <h3 className="text-xl font-semibold text-white">{mode.title}</h3>
+                      <span className="text-[10px] uppercase tracking-widest text-cyan-500 font-bold">{mode.activation}</span>
+                    </div>
+                    <p className="text-white/50 leading-relaxed">{mode.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Adjustments Section */}
+      <section className="py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid gap-16 lg:grid-cols-2">
+            <div className="rounded-2xl border border-white/5 p-10 bg-[#050b11]/40">
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan-500 font-bold mb-6">Velocity</p>
+              <h2 className="text-2xl font-semibold text-white mb-6">Rotation Speed Adjustment.</h2>
+              <p className="text-white/50 leading-relaxed mb-8">
+                The system provides 6 speed levels, allowing you to balance reaction time with precise positioning.
+              </p>
+              <div className="space-y-4">
+                <div className="flex justify-between p-4 rounded-xl border border-white/5 bg-white/[0.02]">
+                  <span className="text-white/40 text-xs uppercase tracking-widest font-bold">Decrease Speed</span>
+                  <span className="text-white text-sm font-medium">Left Pedal + Button</span>
                 </div>
-                <p className="text-lg leading-9 text-white/72">{mode.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Rotation speed
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              Speed adjustment across all modes.
-            </h2>
-          </div>
-
-          <div className="space-y-8 text-lg leading-9 text-white/72">
-            <p>
-              Rotation speed can be adjusted across all modes. The system provides 6 speed levels.
-            </p>
-            <div>
-              <p className="text-white">To decrease rotation speed</p>
-              <p>Hold the left pedal and press the main button.</p>
-            </div>
-            <div>
-              <p className="text-white">To increase rotation speed</p>
-              <p>Hold the right pedal and press the main button.</p>
-            </div>
-            <p>
-              Use lower speed for finer positioning. Use higher speed when you need quicker directional response.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-[#071019] py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Auto Search sector
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              Adjust the search sector to fit the water you want to cover.
-            </h2>
-          </div>
-
-          <div className="space-y-8 text-lg leading-9 text-white/72">
-            <p>
-              In Auto Search Mode, the search sector can be narrowed or widened depending on how focused or broad you want the scan to be.
-            </p>
-            <div>
-              <p className="text-white">To decrease the search sector angle</p>
-              <p>Hold the main button and press the left pedal.</p>
-            </div>
-            <div>
-              <p className="text-white">To increase the search sector angle</p>
-              <p>Hold the main button and press the right pedal.</p>
-            </div>
-            <p>
-              Use a narrower sector for more focused scanning. Use a wider sector when you want to cover more water.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.78fr_1.22fr] lg:px-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Practical tips
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              A few things worth remembering on the water.
-            </h2>
-          </div>
-
-          <div className="space-y-5 text-lg leading-9 text-white/72">
-            {tips.map((tip) => (
-              <p key={tip}>{tip}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="support" className="border-t border-white/10 bg-[#071019] py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:items-end">
-          <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-white/44">
-              Support
-            </p>
-            <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              Need help with setup, compatibility, or operation?
-            </h2>
-            <p className="mt-8 max-w-2xl text-lg leading-9 text-white/72">
-              Contact Kona Compass directly for product questions, guidance, and next steps.
-            </p>
-            <div className="mt-10 space-y-4 text-lg leading-8 text-white/82">
-              <p>Phone: +371 20546403</p>
-              <p>Email: konacompas@gmail.com</p>
-              <p>Instagram: @konacompass</p>
-            </div>
-          </div>
-
-          <div className="relative min-h-[360px] overflow-hidden bg-slate-900">
-            <Image
-              src={`${basePath}/konacompas-old/image-6.png`}
-              alt="Kona Compass support and real-world use image"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 bg-[#050b11] py-12 sm:py-14">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1fr_0.7fr_0.8fr] lg:px-8">
-          <div>
-            <div className="flex items-center gap-4">
-              <div className="relative h-10 w-14 overflow-hidden rounded-sm bg-white/95">
-                <Image
-                  src={`${basePath}/konacompas-old/logo.png`}
-                  alt="Kona Compass logo"
-                  fill
-                  className="object-contain p-1"
-                />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-white/70">
-                  Kona Compass
-                </p>
-                <p className="mt-1 text-sm text-white/45">
-                  Precision control for live sonar
-                </p>
+                <div className="flex justify-between p-4 rounded-xl border border-white/5 bg-white/[0.02]">
+                  <span className="text-white/40 text-xs uppercase tracking-widest font-bold">Increase Speed</span>
+                  <span className="text-white text-sm font-medium">Right Pedal + Button</span>
+                </div>
               </div>
             </div>
-            <p className="mt-6 max-w-md text-base leading-8 text-white/58">
-              Practical control, clear guidance, and direct support for serious live sonar use.
-            </p>
-          </div>
 
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/42">
-              Navigation
-            </p>
-            <div className="mt-5 space-y-3 text-base text-white/66">
-              <p><a href="/" className="transition hover:text-white">Main page</a></p>
-              <p><a href="/instructions" className="transition hover:text-white">Instructions</a></p>
-              <p><a href="#support" className="transition hover:text-white">Support</a></p>
+            <div className="rounded-2xl border border-white/5 p-10 bg-[#050b11]/40">
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan-500 font-bold mb-6">Coverage</p>
+              <h2 className="text-2xl font-semibold text-white mb-6">Search Sector Adjustment.</h2>
+              <p className="text-white/50 leading-relaxed mb-8">
+                Customize the sweep angle in Auto Search Mode to focus on a brush pile or cover an entire flat.
+              </p>
+              <div className="space-y-4">
+                <div className="flex justify-between p-4 rounded-xl border border-white/5 bg-white/[0.02]">
+                  <span className="text-white/40 text-xs uppercase tracking-widest font-bold">Decrease Angle</span>
+                  <span className="text-white text-sm font-medium">Button + Left Pedal</span>
+                </div>
+                <div className="flex justify-between p-4 rounded-xl border border-white/5 bg-white/[0.02]">
+                  <span className="text-white/40 text-xs uppercase tracking-widest font-bold">Increase Angle</span>
+                  <span className="text-white text-sm font-medium">Button + Right Pedal</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/42">
-              Contact
-            </p>
-            <div className="mt-5 space-y-3 text-base text-white/66">
-              <p><a href="tel:+37120546403" className="transition hover:text-white">+371 20546403</a></p>
-              <p><a href="mailto:konacompas@gmail.com" className="transition hover:text-white">konacompas@gmail.com</a></p>
-              <p><a href="https://www.instagram.com/konacompass/" target="_blank" rel="noreferrer" className="transition hover:text-white">Instagram</a></p>
+      {/* Support & CTA */}
+      <section id="waitlist" className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-bold mb-6">Next Steps</p>
+              <h2 className="text-4xl font-semibold text-white leading-tight">Ready to master your live sonar?</h2>
+              <p className="mt-8 text-lg text-white/50 leading-relaxed">
+                Joining the waitlist gives you priority access to the next production run and ensures you're among the first to receive the full technical documentation.
+              </p>
+              <div className="mt-12">
+                <WaitlistForm className="max-w-md" />
+              </div>
+            </div>
+            
+            <div id="support" className="rounded-2xl border border-white/5 bg-white/[0.02] p-10">
+              <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-8">Direct Support</h3>
+              <div className="space-y-8">
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">Telephone</p>
+                  <a href="tel:+37120546403" className="text-xl text-white font-medium hover:text-cyan-400 transition">+371 20546403</a>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">Email</p>
+                  <a href="mailto:konacompas@gmail.com" className="text-xl text-white font-medium hover:text-cyan-400 transition">konacompas@gmail.com</a>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">Social</p>
+                  <a href="https://www.instagram.com/konacompass/" target="_blank" rel="noreferrer" className="text-xl text-white font-medium hover:text-cyan-400 transition">Instagram</a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/5 py-12 bg-[#050b11]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="flex items-center gap-4">
+            <div className="relative h-8 w-10 overflow-hidden rounded-sm bg-white/95">
+              <Image
+                src={`${basePath}/konacompas-old/logo.png`}
+                alt="Kona Compass logo"
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-white/30">© 2026 Kona Compass</p>
+          </div>
+          <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
+            <a href="/" className="hover:text-white transition">Home</a>
+            <a href="/specs" className="hover:text-white transition">Specs</a>
+            <a href="/compare" className="hover:text-white transition">Compare</a>
+          </nav>
         </div>
       </footer>
     </main>
