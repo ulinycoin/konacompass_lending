@@ -1,0 +1,266 @@
+{
+  "Index": {
+    "title": "Stop managing your transducer. Start catching fish.",
+    "subtitle": "Kona Compass is a professional-grade rotator for Garmin, Lowrance, and Humminbird live sonar systems.",
+    "description": "It removes the friction of manual transducer adjustment — giving you accurate directional control, stable positioning, and a cleaner workflow on the water.",
+    "waitlist_badge": "Waitlist Now Open",
+    "waitlist_form_placeholder": "Enter your email",
+    "waitlist_form_button": "Join Waitlist",
+    "waitlist_success_title": "You're on the list.",
+    "waitlist_success_subtitle": "We'll notify you when the first production batch is ready.",
+    "hero_limited": "Limited first production run.",
+    "hero_social_proof": "Reserve your spot before availability opens.",
+
+    "problem_label": "The challenge",
+    "problem_title": "Live sonar is powerful. Manual control is the weak point.",
+    "problem_body": "Live sonar gives anglers a real advantage — but only when transducer control keeps up. Constant manual correction is distracting, slow, and imprecise, especially when fish movement changes fast and every second counts.",
+    "problem_bullets": [
+      "Difficult to hold a stable direction on target",
+      "Too much manual correction while actively fishing",
+      "Slow reaction when fish or conditions change",
+      "Attention pulled away from the water"
+    ],
+
+    "how_label": "How it works",
+    "how_title": "A smarter way to aim and control your transducer.",
+    "how_body": "Kona Compass combines compass-guided positioning, precise rotation, and intuitive controls in one system. Instead of fighting with manual adjustment, you get a setup that works with how you actually fish.",
+    "how_modes_title": "Operating modes",
+    "how_modes": [
+      {
+        "name": "Manual",
+        "desc": "Direct control over transducer direction. Instant response, full command."
+      },
+      {
+        "name": "Direction Hold",
+        "desc": "Holds the set direction automatically. Reduces constant correction in current or wind."
+      },
+      {
+        "name": "Auto Search",
+        "desc": "Sweeps a configurable sector automatically. Covers water without continuous input."
+      },
+      {
+        "name": "Direction Lock",
+        "desc": "Locks a chosen direction precisely. For repeatable, fixed positioning."
+      }
+    ],
+    "how_controls_title": "Controls",
+    "how_controls": [
+      { "label": "Main button", "desc": "Switches between operating modes" },
+      { "label": "Foot pedals", "desc": "Adjusts speed and sector width" },
+      { "label": "Wireless remote", "desc": "Full control from anywhere on the boat" }
+    ],
+
+    "compat_label": "Compatibility",
+    "compat_title": "Works with the systems you already use.",
+    "compat_body": "One system for all three major platforms. Switch sonar brands without replacing your rotator.",
+    "compat_garmin_models": "Panoptix LiveScope LVS32, LVS34, LVS34-IF",
+    "compat_lowrance_models": "ActiveTarget & ActiveTarget 2",
+    "compat_humminbird_models": "MEGA Live Imaging",
+
+    "build_label": "Construction",
+    "build_title": "Engineered for demanding conditions on the water.",
+    "build_items": [
+      {
+        "title": "Sealed housing",
+        "desc": "Hermetically sealed anodized aluminum enclosure. Protects internal sensors and motor from saltwater, spray, and humidity."
+      },
+      {
+        "title": "Marine-grade hardware",
+        "desc": "Structural components in marine-grade stainless steel. Built to handle vibration, UV, and harsh environments."
+      },
+      {
+        "title": "Speed protection",
+        "desc": "Mounting bracket automatically folds at higher boat speeds to protect both the transducer and the rotator assembly."
+      }
+    ],
+
+    "faq_label": "FAQ",
+    "faq_title": "Common questions.",
+    "faq_items": [
+      {
+        "q": "Which live sonar systems is Kona Compass compatible with?",
+        "a": "Kona Compass works with Garmin Panoptix LiveScope (LVS32, LVS34, LVS34-IF), Lowrance ActiveTarget and ActiveTarget 2, and Humminbird MEGA Live Imaging."
+      },
+      {
+        "q": "What's included in the box?",
+        "a": "The system ships complete: rotator unit, integrated orientation system, wireless remote control, dual-switch foot pedals, mounting bracket with installation hardware, and power cable harness. No separate purchases required."
+      },
+      {
+        "q": "How is Kona Compass controlled?",
+        "a": "Via a main control button that switches between modes, foot pedals for speed and sector adjustment, and a wireless remote for full control from anywhere on the boat."
+      },
+      {
+        "q": "When will Kona Compass be available?",
+        "a": "We are preparing the first production batch. Waitlist members receive priority access and will be the first to know the availability date and pricing."
+      },
+      {
+        "q": "How do I reserve my spot?",
+        "a": "Enter your email in the waitlist form on this page. No payment is required — joining the waitlist simply ensures you're first in line when the batch is ready."
+      },
+      {
+        "q": "Do you ship internationally?",
+        "a": "Yes. Shipping regions and details will be confirmed with waitlist members ahead of launch. Contact us directly if you have a specific question about your location."
+      }
+    ],
+
+    "video_label": "In action",
+    "video_title": "See it work on the water.",
+    "video_subtitle": "Watch how Kona Compass handles real fishing conditions — directional hold, auto-search, and wireless control in action.",
+
+    "pricing_label": "Pricing",
+    "pricing_title": "First batch. Limited spots.",
+    "pricing_body": "Exact pricing will be shared with waitlist members before general sale opens. We think you'll be pleasantly surprised.",
+    "pricing_spots": "First production batch",
+    "pricing_spots_note": "Limited availability. Waitlist members get priority access.",
+    "pricing_cta": "Reserve your spot",
+    "pricing_hint": "Free to join. No payment required.",
+
+    "waitlist_title": "Be first. Join the waitlist.",
+    "waitlist_body": "Join the waitlist to receive pricing, the availability date, and first-batch access before general sale opens.",
+    "waitlist_note": "Free to join. No obligation to purchase."
+  },
+
+  "Specs": {
+    "title": "Built for precision. Engineered for the water.",
+    "subtitle": "Full technical specifications will be published at launch. Below is an overview of how the system is designed and what it includes.",
+    "hero_badge": "System Overview",
+    "categories": {
+      "performance": "Performance",
+      "physical": "Build & Materials",
+      "electrical": "Electrical & Protection",
+      "compatibility": "Compatibility"
+    },
+    "items": {
+      "precision": "Compass-guided orientation system",
+      "modes": "Multiple modes: Manual, Direction Hold, Auto Search, Direction Lock",
+      "speed": "Adjustable speed levels",
+      "range": "Configurable sector sweep",
+      "backlash": "Minimal backlash design",
+      "housing": "Hermetically sealed anodized aluminum",
+      "hardware": "Marine-grade stainless steel",
+      "weight": "Disclosed at launch",
+      "clamping": "Designed for demanding marine conditions",
+      "op_speed": "Bracket folds automatically at high speed to protect the transducer",
+      "protection": "Reverse polarity & overload protection",
+      "power": "Standard marine electrical system",
+      "consumption": "Optimized for long sessions",
+      "waterproof": "Fully sealed electronics"
+    },
+    "labels": {
+      "aiming_precision": "Aiming Precision",
+      "operating_modes": "Operating Modes",
+      "rotation_speed": "Rotation Speed",
+      "scanning_range": "Scanning Range",
+      "response_time": "Response Time",
+      "housing": "Housing",
+      "hardware": "Hardware",
+      "weight": "Weight",
+      "load_capacity": "Load Capacity",
+      "operating_speed": "Operating Speed",
+      "power_input": "Power Input",
+      "power_consumption": "Power Consumption",
+      "waterproofing": "Waterproofing",
+      "input_protection": "Input Protection"
+    },
+    "kit": [
+      "Kona Compass Rotator Unit",
+      "Integrated Orientation System",
+      "Wireless Remote Control",
+      "Foot Pedals (Dual-switch)",
+      "Mounting Bracket & Hardware",
+      "Power Cable Harness"
+    ],
+    "box_title": "What's in the box.",
+    "box_subtitle": "Kona Compass ships as a complete, ready-to-install system. Remote control and foot pedals are included — no separate purchases required."
+  },
+
+  "Compare": {
+    "title": "A smarter way to control your live sonar.",
+    "subtitle": "See how Kona Compass compares to premium brand-specific mounts and manual poles — across the features that matter on the water.",
+    "hero_badge": "Comparison",
+    "table": {
+      "feature": "Feature",
+      "kona": "Kona Compass",
+      "premium": "Premium Brands",
+      "manual": "Manual Poles",
+      "precision": "Compass-guided orientation",
+      "compatibility": "Garmin, Lowrance, Humminbird",
+      "modes": "Multiple modes incl. Auto Search",
+      "control": "Remote & foot pedals included",
+      "build": "Sealed anodized aluminum housing",
+      "stability": "Built-in orientation system"
+    },
+    "competitors": {
+      "precision_premium": "Visual / GPS",
+      "precision_manual": "—",
+      "compat_premium": "Brand-locked",
+      "compat_manual": "Universal (DIY)",
+      "modes_premium": "Limited",
+      "modes_manual": "Manual only",
+      "control_premium": "Often sold separately",
+      "control_manual": "Hand-operated",
+      "build_premium": "Plastic / composite",
+      "build_manual": "PVC / aluminum",
+      "stability_premium": "Requires separate sensor",
+      "stability_manual": "None"
+    }
+  },
+
+  "Instructions": {
+    "title": "How it works.",
+    "subtitle": "An overview of the main controls, operating modes, and adjustment logic for Kona Compass.",
+    "hero_badge": "Controls & Modes",
+    "quick_start": "Quick Start.",
+    "modes_title": "Operating Modes.",
+    "speed_title": "Speed Adjustment.",
+    "speed_desc": "Rotation speed is adjustable across multiple levels — dial in the balance between quick reaction and fine positioning.",
+    "sector_title": "Search Sector Adjustment.",
+    "sector_desc": "Customize the sweep angle in Auto Search Mode to focus on a brush pile or cover an entire flat.",
+    "section_basics": "Basics",
+    "section_intelligence": "Intelligence",
+    "section_velocity": "Velocity",
+    "section_coverage": "Coverage",
+    "overview_badge": "Interface Overview",
+    "overview_title": "Control logic at a glance.",
+    "quick_start_items": [
+      "On power-on the device enters Manual Mode automatically.",
+      "The main control button switches between operating modes.",
+      "Pedal combinations adjust rotation speed and auto-search sector width."
+    ],
+    "mode_activations": [
+      "Automatic on power-on",
+      "Short press of main button",
+      "Hold main button 2 sec",
+      "Hold main button 3 sec"
+    ],
+    "speed_decrease": "Decrease Speed",
+    "speed_increase": "Increase Speed",
+    "speed_decrease_action": "Left Pedal + Button",
+    "speed_increase_action": "Right Pedal + Button",
+    "sector_decrease": "Decrease Angle",
+    "sector_increase": "Increase Angle",
+    "sector_decrease_action": "Button + Left Pedal",
+    "sector_increase_action": "Button + Right Pedal",
+    "contact_title": "Direct Support",
+    "contact_phone": "Phone",
+    "contact_email": "Email",
+    "contact_social": "Instagram"
+  },
+
+  "Common": {
+    "product_name": "Kona Compass",
+    "tagline": "Precision control for live sonar",
+    "footer_desc": "Built for anglers who rely on live sonar and want accurate, reliable transducer control on the water.",
+    "footer_copy": "© 2026 Kona Compass",
+    "contact": "Contact",
+    "nav": {
+      "home": "Home",
+      "specs": "Specs",
+      "compare": "Compare",
+      "manual": "Manual",
+      "how_it_works": "How it works",
+      "compatibility": "Compatibility",
+      "faq": "FAQ"
+    }
+  }
+}
