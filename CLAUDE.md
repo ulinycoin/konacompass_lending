@@ -10,6 +10,17 @@ The repo has two concerns:
 - `landing/` — the Next.js website (the active codebase)
 - `docs/` — strategy, brand, SEO, marketing, and product documentation (Russian/English)
 
+## Agent System
+
+This repository uses a local agent system for Codex-style task routing.
+
+- `.codex/` defines the operating model, agent registry, and workflows.
+- `.agents/skills/` defines reusable procedures for specialist tasks.
+- Use the agent system for any work that touches positioning, landing pages, SEO/GEO, PR/SMM, paid media, partnerships, email lifecycle, or analytics.
+- Prefer routing a task through the relevant agent role before editing code or content when the task spans more than one discipline.
+- Use `orchestrator` for task decomposition, `strategy` for positioning and messaging, `landing` for UI and implementation, `seo-geo` for discoverability, `pr-smm` for distribution, `growth-campaign` for launch coordination, `paid-media` for ads, `partnerships` for collaborations, `email-lifecycle` for nurture, `analytics` for measurement, and `reviewer` for final quality control.
+- When a task is public-facing, finish with a review pass before considering it done.
+
 ## Landing: Development Commands
 
 All commands run from `landing/`:
@@ -53,3 +64,5 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 - Pages are client components (`"use client"`) when they use hooks; layout files are server components.
 - `basePath` must be prepended to all `src` attributes for images and links that reference `public/` assets.
 - The `compare/page.tsx` and `instructions/page.tsx` pages contain their own inlined `WaitlistForm` copies — if updating form logic, update `src/components/WaitlistForm.tsx` and reconcile the inline copies.
+- When a task fits one of the skills in `.agents/skills/`, use that skill's workflow as the operating procedure instead of improvising a new one.
+- Avoid pill-shaped buttons in the landing UI. Prefer straight or lightly rounded buttons with a visible but restrained radius.

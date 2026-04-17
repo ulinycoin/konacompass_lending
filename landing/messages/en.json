@@ -1,19 +1,19 @@
 {
   "Index": {
-    "title": "Stop managing your transducer. Start catching fish.",
-    "subtitle": "Kona Compass is a professional-grade rotator for Garmin, Lowrance, and Humminbird live sonar systems.",
-    "description": "It removes the friction of manual transducer adjustment — giving you accurate directional control, stable positioning, and a cleaner workflow on the water.",
-    "waitlist_badge": "Waitlist Now Open",
+    "title": "Kona Compass. Full control on the water.",
+    "subtitle": "Built for anglers who want a cleaner workflow and first access when pre-orders open.",
+    "description": "A first look at the Kona Compass brand and product direction.",
+    "waitlist_badge": "Early access",
     "waitlist_form_placeholder": "Enter your email",
     "waitlist_form_button": "Join Waitlist",
-    "waitlist_success_title": "You're on the list.",
-    "waitlist_success_subtitle": "We'll notify you when the first production batch is ready.",
-    "hero_limited": "Limited first production run.",
-    "hero_social_proof": "Reserve your spot before availability opens.",
+    "waitlist_success_title": "You're in.",
+    "waitlist_success_subtitle": "We'll email launch updates as soon as the first run is ready.",
+    "hero_limited": "Early members get first notice when pre-orders open.",
+    "hero_social_proof": "No purchase required to join.",
 
     "problem_label": "The challenge",
-    "problem_title": "Live sonar is powerful. Manual control is the weak point.",
-    "problem_body": "Live sonar gives anglers a real advantage — but only when transducer control keeps up. Constant manual correction is distracting, slow, and imprecise, especially when fish movement changes fast and every second counts.",
+    "problem_title": "Kona Compass fixes the weak point in live sonar control.",
+    "problem_body": "Live sonar gives anglers a real advantage — but only when transducer control keeps up. Kona Compass removes the constant manual correction that slows you down when fish movement changes fast.",
     "problem_bullets": [
       "Difficult to hold a stable direction on target",
       "Too much manual correction while actively fishing",
@@ -22,8 +22,8 @@
     ],
 
     "how_label": "How it works",
-    "how_title": "A smarter way to aim and control your transducer.",
-    "how_body": "Kona Compass combines compass-guided positioning, precise rotation, and intuitive controls in one system. Instead of fighting with manual adjustment, you get a setup that works with how you actually fish.",
+    "how_title": "Kona Compass makes live-sonar control feel natural.",
+    "how_body": "Simple controls, compass-guided positioning, and a straightforward workflow make Kona Compass easy to understand.",
     "how_modes_title": "Operating modes",
     "how_modes": [
       {
@@ -52,7 +52,7 @@
 
     "compat_label": "Compatibility",
     "compat_title": "Works with the systems you already use.",
-    "compat_body": "One system for all three major platforms. Switch sonar brands without replacing your rotator.",
+    "compat_body": "Kona Compass works across all three major platforms. Switch sonar brands without replacing the rotator.",
     "compat_garmin_models": "Panoptix LiveScope LVS32, LVS34, LVS34-IF",
     "compat_lowrance_models": "ActiveTarget & ActiveTarget 2",
     "compat_humminbird_models": "MEGA Live Imaging",
@@ -91,33 +91,33 @@
       },
       {
         "q": "When will Kona Compass be available?",
-        "a": "We are preparing the first production batch. Waitlist members receive priority access and will be the first to know the availability date and pricing."
+        "a": "We are preparing the first production run. Subscribers will hear first about timing and pricing."
       },
       {
         "q": "How do I reserve my spot?",
-        "a": "Enter your email in the waitlist form on this page. No payment is required — joining the waitlist simply ensures you're first in line when the batch is ready."
+        "a": "Enter your email in the form above. That puts you on the launch list."
       },
       {
         "q": "Do you ship internationally?",
-        "a": "Yes. Shipping regions and details will be confirmed with waitlist members ahead of launch. Contact us directly if you have a specific question about your location."
+        "a": "Yes. Shipping regions and details will be confirmed before launch. Contact us directly if you have a specific question about your location."
       }
     ],
 
     "video_label": "In action",
     "video_title": "See it work on the water.",
-    "video_subtitle": "Watch how Kona Compass handles real fishing conditions — directional hold, auto-search, and wireless control in action.",
+    "video_subtitle": "Watch Kona Compass handle real fishing conditions — directional hold, auto-search, and wireless control in action.",
 
-    "pricing_label": "Pricing",
-    "pricing_title": "First batch. Limited spots.",
-    "pricing_body": "Exact pricing will be shared with waitlist members before general sale opens. We think you'll be pleasantly surprised.",
-    "pricing_spots": "First production batch",
-    "pricing_spots_note": "Limited availability. Waitlist members get priority access.",
-    "pricing_cta": "Reserve your spot",
-    "pricing_hint": "Free to join. No payment required.",
+    "pricing_label": "Launch access",
+    "pricing_title": "Get priority when pre-orders open.",
+    "pricing_body": "Waitlist members get the first update on pricing and timing.",
+    "pricing_spots": "Priority access",
+    "pricing_spots_note": "Join now to be first in line.",
+    "pricing_cta": "Get early access",
+    "pricing_hint": "Free to join.",
 
-    "waitlist_title": "Be first. Join the waitlist.",
-    "waitlist_body": "Join the waitlist to receive pricing, the availability date, and first-batch access before general sale opens.",
-    "waitlist_note": "Free to join. No obligation to purchase."
+    "waitlist_title": "Be first. Join the list.",
+    "waitlist_body": "Leave your email to get launch updates and early access to pre-orders.",
+    "waitlist_note": "Free to join. No obligation to buy."
   },
 
   "Specs": {
@@ -175,7 +175,7 @@
   },
 
   "Compare": {
-    "title": "A smarter way to control your live sonar.",
+    "title": "Why anglers choose Kona Compass.",
     "subtitle": "See how Kona Compass compares to premium brand-specific mounts and manual poles — across the features that matter on the water.",
     "hero_badge": "Comparison",
     "table": {
@@ -208,7 +208,7 @@
 
   "Instructions": {
     "title": "How it works.",
-    "subtitle": "An overview of the main controls, operating modes, and adjustment logic for Kona Compass.",
+    "subtitle": "An overview of the main controls, operating modes, and adjustment logic inside Kona Compass.",
     "hero_badge": "Controls & Modes",
     "quick_start": "Quick Start.",
     "modes_title": "Operating Modes.",
@@ -249,8 +249,11 @@
 
   "Common": {
     "product_name": "Kona Compass",
-    "tagline": "Precision control for live sonar",
-    "footer_desc": "Built for anglers who rely on live sonar and want accurate, reliable transducer control on the water.",
+    "tagline": "Precision control for Kona Compass",
+    "footer_desc": "Built for anglers who want accurate, reliable transducer control on the water with Kona Compass.",
+    "footer_product": "Product",
+    "footer_page": "On this page",
+    "footer_contact": "Contact",
     "footer_copy": "© 2026 Kona Compass",
     "contact": "Contact",
     "nav": {

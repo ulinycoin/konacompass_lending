@@ -225,37 +225,20 @@ function Pricing() {
 
           {/* Right: spot counter + CTA */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-8 lg:p-10">
-            {/* Spot indicator */}
-            <div className="mb-8 flex items-center gap-4">
-              <div className="flex gap-1.5">
-                {Array.from({ length: 10 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`h-2 w-2 rounded-full ${
-                      i < 7 ? "bg-cyan-500" : "bg-white/15"
-                    }`}
-                  />
-                ))}
-              </div>
-              <p className="text-xs text-white/40">
-                <span className="font-semibold text-cyan-400">28</span> / 100{" "}
-                <span className="text-white/30">spots taken</span>
-              </p>
+            <div className="mb-8 inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-cyan-300">
+              {t("pricing_spots")}
             </div>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">
-              {t("pricing_spots")}
+            <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              {t("pricing_title")}
             </p>
-            <p className="mt-3 text-4xl font-semibold tracking-tight text-white">
-              TBA
-            </p>
-            <p className="mt-2 text-sm text-white/40">
+            <p className="mt-3 text-sm leading-6 text-white/40">
               {t("pricing_spots_note")}
             </p>
 
             <a
               href="#waitlist"
-              className="mt-8 flex w-full items-center justify-center rounded-full border border-cyan-500/40 bg-cyan-600/15 py-3 text-sm font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/25"
+              className="mt-8 flex w-full items-center justify-center rounded-lg border border-cyan-500/40 bg-cyan-600/15 py-3 text-sm font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/25"
             >
               {t("pricing_cta")}
             </a>
@@ -529,7 +512,9 @@ function Footer({ locale }: { locale: string }) {
 
           {/* Product pages */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">Product</p>
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+              {common("footer_product")}
+            </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
                 <a href={`/${locale}/compare`} className="transition hover:text-white">
@@ -551,7 +536,9 @@ function Footer({ locale }: { locale: string }) {
 
           {/* On this page */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">On this page</p>
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+              {common("footer_page")}
+            </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
                 <a href="#how-it-works" className="transition hover:text-white">
@@ -573,7 +560,9 @@ function Footer({ locale }: { locale: string }) {
 
           {/* Contact */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">Contact</p>
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+              {common("footer_contact")}
+            </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
                 <a href="tel:+37120546403" className="transition hover:text-white">

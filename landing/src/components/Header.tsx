@@ -155,7 +155,7 @@ export default function Header() {
 
           <a
             href={anchorHref("#waitlist")}
-            className="hidden rounded-full border border-cyan-500/30 bg-cyan-600/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20 sm:block"
+            className="hidden rounded-lg border border-cyan-500/30 bg-cyan-600/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20 sm:block"
           >
             {t("waitlist_form_button")}
           </a>
@@ -199,7 +199,7 @@ export default function Header() {
             <a
               href={anchorHref("#waitlist")}
               onClick={() => setMobileOpen(false)}
-              className="block rounded-full border border-cyan-500/30 bg-cyan-600/10 px-4 py-2.5 text-center text-xs font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20"
+              className="block rounded-lg border border-cyan-500/30 bg-cyan-600/10 px-4 py-2.5 text-center text-xs font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20"
             >
               {t("waitlist_form_button")}
             </a>
