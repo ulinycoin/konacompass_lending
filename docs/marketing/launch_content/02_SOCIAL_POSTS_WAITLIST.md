@@ -13,9 +13,9 @@ Something's changed on the water. 🌊
 
 Precision isn’t just a word; it’s the difference between catching a trophy and missing it by 3 feet. The waitlist for Kona Compass is officially OPEN.
 
-✅ 0.3° Accuracy
-✅ Wireless Control
-✅ Built for Pros
+✅ Precise heading control
+✅ Wireless control
+✅ Built for serious anglers
 
 Limited first production batch. Join the waitlist now to get early-bird access and exclusive technical updates.
 
@@ -27,14 +27,14 @@ Limited first production batch. Join the waitlist now to get early-bird access a
 
 ## Post 2: The "Technical Deep Dive"
 **Focus:** Educating the audience on why precision matters.
-**Image suggestion:** Split screen — Manual Pole vs. Kona Compass (UI showing the 0.3° precision).
+**Image suggestion:** Split screen — Manual Pole vs. Kona Compass (UI showing the Unrivaled Precision precision).
 
 **Caption:**
 Why are you still guessing your transducer angle? 📐
 
-Manual poles are great until you try to hit a target at 60 feet. At that distance, a 5-degree manual error means your beam is nowhere near the fish.
+Manual poles are great until you try to hold a precise heading at 60 feet. At that distance, a 5-degree manual error means your beam is nowhere near where you intended.
 
-Kona Compass gives you **0.3-degree precision** guided by an internal compass. No more visual guessing. Just precise, hands-free rotation.
+Kona Compass gives you **0.3-degree precision** through heading-based positioning. No more visual guessing. Just precise, hands-free rotation.
 
 Compatible with Garmin, Lowrance, and Humminbird.
 
@@ -57,7 +57,7 @@ Production is ramping up for Kona Compass. Our mission is quality over quantity,
 
 Waitlist members get:
 1. First priority for order fulfillment.
-2. Exclusive early-bird pricing.
+2. Early-bird pricing.
 3. Priority technical support.
 
 Don't wait for the general launch—by then, the first batch might already be gone.

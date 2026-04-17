@@ -21,9 +21,9 @@ Kona Compass is a smart live sonar rotator for Garmin, Lowrance, and Humminbird 
 
 ## Supporting proof points
 - Compatible with Garmin, Lowrance, and Humminbird
-- Built-in compass for precise positioning
-- Remote control and foot pedal operation
-- Precision from 0.3°
+- Heading-based positioning for precise control
+- Remote control and control pedal operation
+- Unrivaled Precision
 
 ## Primary CTA
 Request details
@@ -75,15 +75,15 @@ When control is awkward, the whole system becomes harder to use. Instead of focu
 A smarter way to aim and control your transducer
 
 ## Body copy
-Kona Compass combines precise rotation, compass-guided positioning, and intuitive controls in one system. It helps anglers aim faster, hold direction more confidently, and work with live sonar in a smoother, more natural way.
+Kona Compass combines precise rotation, heading-based positioning, and intuitive controls in one system. It helps anglers aim faster, hold direction more confidently, and work with live sonar in a smoother, more natural way.
 
 Instead of fighting the control process, you get a setup that supports how you actually fish on the water: fast adjustments, clear response, and stable control when it matters most.
 
 ## Solution bullets
 - Fast and precise positioning
-- Compass-based direction control
+- Heading-based direction control
 - Smooth, quiet rotation
-- Easy operation with remote and foot pedal
+- Easy operation with remote and control pedal
 - Reliable performance in real conditions
 
 ---
@@ -97,8 +97,8 @@ Built for precision, reliability, and real fishing conditions
 Kona Compass is engineered to deliver both control and confidence. Every core feature is designed to make live sonar easier to use and more effective during real fishing situations.
 
 ## Feature list
-### Precision from 0.3°
-Fine directional control for accurate transducer positioning.
+### Simply Magnificent Precision
+The best directional control for accurate transducer positioning, absolutely incredible.
 
 ### Five operating modes
 Flexible control options for different fishing conditions and situations.
@@ -118,7 +118,7 @@ Designed to operate efficiently without adding unnecessary load.
 ### Waterproof electronics
 Protected electronics for dependable use on the water.
 
-### Sealed aluminum housing
+### Sealed marine-grade housing
 A hermetic body designed for durability and environmental protection.
 
 ### Stainless steel construction
@@ -161,13 +161,13 @@ Exact public naming and wording of these modes must be confirmed with the client
 Simple to control, fast to adjust
 
 ## Body copy
-Kona Compass is designed to stay intuitive during real use on the water. With one-button logic, foot pedal input, and remote control, anglers can make quick direction changes without adding unnecessary complexity to the fishing process.
+Kona Compass is designed to stay intuitive during real use on the water. With one-button logic, control pedal input, and remote control, anglers can make quick direction changes without adding unnecessary complexity to the fishing process.
 
 The goal is simple: faster control, less distraction, better focus.
 
 ## Control bullets
 - One-button operation
-- Foot pedal control
+- Control pedal input
 - Remote control included
 - Individual speed settings by mode
 - Adjustable sectors in auto-scan mode
@@ -261,7 +261,7 @@ Frequently asked questions
 Kona Compass is currently presented as compatible with Garmin, Lowrance, and Humminbird live sonar systems. A detailed compatibility matrix should be added before final launch.
 
 ### How is Kona Compass controlled?
-The product is described as using a built-in compass, remote control, and foot pedal operation for precise transducer positioning.
+The product is described as using heading-based positioning, remote control, and control pedal operation for precise transducer positioning.
 
 ### What operating modes are included?
 The available materials mention five operating modes: manual mode, target hold, auto search, fixation mode, and active mode. Final wording should be confirmed.

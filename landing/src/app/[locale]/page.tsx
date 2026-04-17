@@ -486,7 +486,7 @@ function Footer({ locale }: { locale: string }) {
   return (
     <footer className="border-t border-white/10 bg-[#050b11] py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.5fr_0.5fr_0.6fr]">
+        <div className="grid gap-10 lg:grid-cols-[1fr_0.5fr_0.5fr_0.6fr_0.7fr]">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-4">
@@ -582,6 +582,35 @@ function Footer({ locale }: { locale: string }) {
                   className="transition hover:text-white"
                 >
                   Instagram
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+              {common("footer_legal")}
+            </p>
+            <div className="space-y-3 text-sm text-white/55">
+              <p>
+                <a href={`/${locale}/privacy`} className="transition hover:text-white">
+                  {common("nav.privacy")}
+                </a>
+              </p>
+              <p>
+                <a href={`/${locale}/cookies`} className="transition hover:text-white">
+                  {common("nav.cookies")}
+                </a>
+              </p>
+              <p>
+                <a href={`/${locale}/terms`} className="transition hover:text-white">
+                  {common("nav.terms")}
+                </a>
+              </p>
+              <p>
+                <a href={`/${locale}/legal`} className="transition hover:text-white">
+                  {common("nav.legal")}
                 </a>
               </p>
             </div>

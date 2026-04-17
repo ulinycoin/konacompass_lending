@@ -240,6 +240,20 @@ export default function Compare({
               {common("contact")}
             </a>
           </nav>
+          <nav className="flex flex-wrap gap-8 text-xs uppercase tracking-widest text-white/30">
+            <a href={`/${locale}/privacy`} className="hover:text-white transition">
+              {common("nav.privacy")}
+            </a>
+            <a href={`/${locale}/cookies`} className="hover:text-white transition">
+              {common("nav.cookies")}
+            </a>
+            <a href={`/${locale}/terms`} className="hover:text-white transition">
+              {common("nav.terms")}
+            </a>
+            <a href={`/${locale}/legal`} className="hover:text-white transition">
+              {common("nav.legal")}
+            </a>
+          </nav>
         </div>
       </footer>
     </main>

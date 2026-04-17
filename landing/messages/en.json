@@ -1,7 +1,7 @@
 {
   "Index": {
     "title": "Kona Compass. Full control on the water.",
-    "subtitle": "Built for anglers who want a cleaner workflow and first access when pre-orders open.",
+    "subtitle": "Built for anglers who want precise heading control and first access when pre-orders open.",
     "description": "A first look at the Kona Compass brand and product direction.",
     "waitlist_badge": "Early access",
     "waitlist_form_placeholder": "Enter your email",
@@ -13,7 +13,7 @@
 
     "problem_label": "The challenge",
     "problem_title": "Kona Compass fixes the weak point in live sonar control.",
-    "problem_body": "Live sonar gives anglers a real advantage — but only when transducer control keeps up. Kona Compass removes the constant manual correction that slows you down when fish movement changes fast.",
+    "problem_body": "Live sonar gives anglers a real advantage — but only when transducer control keeps up. Kona Compass removes the constant manual correction that slows you down when the heading needs to change fast.",
     "problem_bullets": [
       "Difficult to hold a stable direction on target",
       "Too much manual correction while actively fishing",
@@ -23,7 +23,7 @@
 
     "how_label": "How it works",
     "how_title": "Kona Compass makes live-sonar control feel natural.",
-    "how_body": "Simple controls, compass-guided positioning, and a straightforward workflow make Kona Compass easy to understand.",
+    "how_body": "Simple controls, heading-based positioning, and a straightforward workflow make Kona Compass easy to understand as a heading-based control system.",
     "how_modes_title": "Operating modes",
     "how_modes": [
       {
@@ -46,7 +46,7 @@
     "how_controls_title": "Controls",
     "how_controls": [
       { "label": "Main button", "desc": "Switches between operating modes" },
-      { "label": "Foot pedals", "desc": "Adjusts speed and sector width" },
+      { "label": "Control pedal", "desc": "Adjusts speed and sector width" },
       { "label": "Wireless remote", "desc": "Full control from anywhere on the boat" }
     ],
 
@@ -54,7 +54,7 @@
     "compat_title": "Works with the systems you already use.",
     "compat_body": "Kona Compass works across all three major platforms. Switch sonar brands without replacing the rotator.",
     "compat_garmin_models": "Panoptix LiveScope LVS32, LVS34, LVS34-IF",
-    "compat_lowrance_models": "ActiveTarget & ActiveTarget 2",
+    "compat_lowrance_models": "ActiveTarget, ActiveTarget 2, and ActiveTarget 2 XL",
     "compat_humminbird_models": "MEGA Live Imaging",
 
     "build_label": "Construction",
@@ -62,7 +62,7 @@
     "build_items": [
       {
         "title": "Sealed housing",
-        "desc": "Hermetically sealed anodized aluminum enclosure. Protects internal sensors and motor from saltwater, spray, and humidity."
+        "desc": "Hermetically sealed marine-grade housing. Protects internal sensors and motor from saltwater, spray, and humidity."
       },
       {
         "title": "Marine-grade hardware",
@@ -79,15 +79,15 @@
     "faq_items": [
       {
         "q": "Which live sonar systems is Kona Compass compatible with?",
-        "a": "Kona Compass works with Garmin Panoptix LiveScope (LVS32, LVS34, LVS34-IF), Lowrance ActiveTarget and ActiveTarget 2, and Humminbird MEGA Live Imaging."
+        "a": "Kona Compass works with Garmin Panoptix LiveScope (LVS32, LVS34, LVS34-IF), Lowrance ActiveTarget, ActiveTarget 2, and ActiveTarget 2 XL, and Humminbird MEGA Live Imaging."
       },
       {
         "q": "What's included in the box?",
-        "a": "The system ships complete: rotator unit, integrated orientation system, wireless remote control, dual-switch foot pedals, mounting bracket with installation hardware, and power cable harness. No separate purchases required."
+        "a": "The system ships complete: rotator unit, integrated orientation system, wireless remote control, control pedal, mounting bracket with installation hardware, and power cable harness. No separate purchases required."
       },
       {
         "q": "How is Kona Compass controlled?",
-        "a": "Via a main control button that switches between modes, foot pedals for speed and sector adjustment, and a wireless remote for full control from anywhere on the boat."
+        "a": "Via a main control button that switches between modes, a control pedal for speed and sector adjustment, and a wireless remote for full control from anywhere on the boat."
       },
       {
         "q": "When will Kona Compass be available?",
@@ -105,7 +105,7 @@
 
     "video_label": "In action",
     "video_title": "See it work on the water.",
-    "video_subtitle": "Watch Kona Compass handle real fishing conditions — directional hold, auto-search, and wireless control in action.",
+    "video_subtitle": "Watch Kona Compass handle real fishing conditions — heading hold, auto-search, and wireless control in action.",
 
     "pricing_label": "Launch access",
     "pricing_title": "Get priority when pre-orders open.",
@@ -117,7 +117,11 @@
 
     "waitlist_title": "Be first. Join the list.",
     "waitlist_body": "Leave your email to get launch updates and early access to pre-orders.",
-    "waitlist_note": "Free to join. No obligation to buy."
+    "waitlist_note": "Free to join. No obligation to buy.",
+    "waitlist_consent_start": "I agree to receive launch updates and accept the",
+    "waitlist_consent_link": "privacy notice",
+    "waitlist_consent_end": "for how my email is processed.",
+    "waitlist_consent_error": "Please confirm consent to join the list."
   },
 
   "Specs": {
@@ -131,12 +135,12 @@
       "compatibility": "Compatibility"
     },
     "items": {
-      "precision": "Compass-guided orientation system",
+      "precision": "Heading-based orientation system",
       "modes": "Multiple modes: Manual, Direction Hold, Auto Search, Direction Lock",
       "speed": "Adjustable speed levels",
       "range": "Configurable sector sweep",
       "backlash": "Minimal backlash design",
-      "housing": "Hermetically sealed anodized aluminum",
+      "housing": "Hermetically sealed marine-grade housing",
       "hardware": "Marine-grade stainless steel",
       "weight": "Disclosed at launch",
       "clamping": "Designed for demanding marine conditions",
@@ -166,12 +170,12 @@
       "Kona Compass Rotator Unit",
       "Integrated Orientation System",
       "Wireless Remote Control",
-      "Foot Pedals (Dual-switch)",
+      "Control Pedal (Dual-switch)",
       "Mounting Bracket & Hardware",
       "Power Cable Harness"
     ],
     "box_title": "What's in the box.",
-    "box_subtitle": "Kona Compass ships as a complete, ready-to-install system. Remote control and foot pedals are included — no separate purchases required."
+    "box_subtitle": "Kona Compass ships as a complete, ready-to-install system. Remote control and control pedal are included — no separate purchases required."
   },
 
   "Compare": {
@@ -183,11 +187,11 @@
       "kona": "Kona Compass",
       "premium": "Premium Brands",
       "manual": "Manual Poles",
-      "precision": "Compass-guided orientation",
+      "precision": "Heading-based orientation",
       "compatibility": "Garmin, Lowrance, Humminbird",
       "modes": "Multiple modes incl. Auto Search",
-      "control": "Remote & foot pedals included",
-      "build": "Sealed anodized aluminum housing",
+      "control": "Remote & control pedal included",
+      "build": "Sealed marine-grade housing",
       "stability": "Built-in orientation system"
     },
     "competitors": {
@@ -249,10 +253,11 @@
 
   "Common": {
     "product_name": "Kona Compass",
-    "tagline": "Precision control for Kona Compass",
+    "tagline": "Precision control by Kona Compass",
     "footer_desc": "Built for anglers who want accurate, reliable transducer control on the water with Kona Compass.",
     "footer_product": "Product",
     "footer_page": "On this page",
+    "footer_legal": "Legal",
     "footer_contact": "Contact",
     "footer_copy": "© 2026 Kona Compass",
     "contact": "Contact",
@@ -263,7 +268,30 @@
       "manual": "Manual",
       "how_it_works": "How it works",
       "compatibility": "Compatibility",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Terms",
+      "legal": "Legal notice"
     }
+  },
+
+  "Consent": {
+    "banner_label": "Cookie choices",
+    "banner_title": "Choose what we may load on your browser.",
+    "banner_body": "Necessary cookies keep the site working. Analytics and third-party content stay off until you allow them.",
+    "banner_manage": "Manage settings",
+    "banner_accept": "Accept all",
+    "banner_reject": "Reject non-essential",
+    "banner_save": "Save selection",
+    "banner_close": "Close",
+    "banner_required": "Required",
+    "banner_necessary": "Necessary cookies",
+    "banner_necessary_desc": "Needed for consent storage and basic site operation.",
+    "banner_analytics": "Analytics cookies",
+    "banner_analytics_desc": "Helps us understand site usage in aggregated form.",
+    "banner_third_party": "Third-party content",
+    "banner_third_party_desc": "Controls external embeds and media providers.",
+    "banner_note": "You can change these choices later through the banner."
   }
 }

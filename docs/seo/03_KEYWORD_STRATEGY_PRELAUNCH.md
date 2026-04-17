@@ -17,7 +17,7 @@
 ### Кластер A: Точность и Контроль (Precision & Control)
 **Pillar:** "The Ultimate Guide to Live Sonar Transducer Control"
 *   **Cluster 1:** "Why manual rotation is slowing you down" (Problem-focused)
-*   **Cluster 2:** "Understanding degree precision in live sonar (0.3° vs standard)"
+*   **Cluster 2:** "Understanding degree precision in live sonar (Simply Magnificent vs standard)"
 *   **Cluster 3:** "Kona Compass: Built-in compass for stable direction control"
 
 ### Кластер B: Совместимость (Compatibility)

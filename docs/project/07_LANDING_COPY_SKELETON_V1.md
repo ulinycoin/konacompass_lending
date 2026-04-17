@@ -38,9 +38,9 @@ Kona Compass is a smart live sonar rotator for Garmin, Lowrance, and Humminbird 
 
 ### Hero proof points
 - Compatible with Garmin, Lowrance, Humminbird
-- Built-in compass
-- Remote control + foot pedal
-- Precision from 0.3°
+- Heading-based positioning
+- Remote control + control pedal
+- Unrivaled Precision
 
 ### Visual direction
 - product installed on boat
@@ -89,7 +89,7 @@ Live sonar helps anglers see more, react faster, and fish more precisely. But wh
 A smarter way to aim and control your transducer
 
 ### Copy
-Kona Compass combines precise rotation, compass-guided positioning, and intuitive controls in one system. It helps you adjust direction faster, hold position more confidently, and work with live sonar in a smoother, more natural way.
+Kona Compass combines precise rotation, heading-based positioning, and intuitive controls in one system. It helps you adjust direction faster, hold position more confidently, and work with live sonar in a smoother, more natural way.
 
 ### Solution bullets
 - Fast and precise positioning
@@ -105,14 +105,14 @@ Kona Compass combines precise rotation, compass-guided positioning, and intuitiv
 Built for precision, reliability, and real fishing conditions
 
 ### Feature cards
-- Precision from 0.3°
+- Simply Magnificent Precision
 - 5 operating modes
 - 6 speed settings
 - Auto-scan sectors from 20° to 340°
 - Quiet motor, smooth rotation
 - Minimal power consumption
 - Waterproof electronics
-- Sealed aluminum housing
+- Sealed marine-grade housing
 - Stainless steel construction
 
 ---
@@ -152,11 +152,11 @@ Designed for dynamic conditions where fast reactions matter.
 Simple to control, fast to adjust
 
 ### Copy
-Kona Compass is designed to stay easy to use while fishing. One-button logic, foot pedal control, and remote operation help make quick adjustments without adding unnecessary complexity.
+Kona Compass is designed to stay easy to use while fishing. One-button logic, control pedal input, and remote operation help make quick adjustments without adding unnecessary complexity.
 
 ### Bullets
 - One-button operation
-- Foot pedal control
+- Control pedal input
 - Remote control
 - Individual speed settings by mode
 - Adjustable auto-scan sectors

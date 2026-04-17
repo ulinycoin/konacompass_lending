@@ -237,6 +237,20 @@ export default function Specs({
               {common("nav.manual")}
             </a>
           </nav>
+          <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/25">
+            <a href={`/${locale}/privacy`} className="hover:text-white transition">
+              {common("nav.privacy")}
+            </a>
+            <a href={`/${locale}/cookies`} className="hover:text-white transition">
+              {common("nav.cookies")}
+            </a>
+            <a href={`/${locale}/terms`} className="hover:text-white transition">
+              {common("nav.terms")}
+            </a>
+            <a href={`/${locale}/legal`} className="hover:text-white transition">
+              {common("nav.legal")}
+            </a>
+          </nav>
         </div>
       </footer>
     </main>
