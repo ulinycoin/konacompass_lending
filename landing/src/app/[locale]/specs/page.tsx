@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { use } from "react";
 import { useTranslations } from "next-intl";
 import Header from "@/components/Header";
@@ -224,32 +225,29 @@ export default function Specs({
             </p>
           </div>
           <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
-            <a href={`/${locale}`} className="hover:text-white transition">
+            <Link href={`/${locale}`} className="hover:text-white transition">
               {common("nav.home")}
-            </a>
-            <a href={`/${locale}/compare`} className="hover:text-white transition">
+            </Link>
+            <Link href={`/${locale}/compare`} className="hover:text-white transition">
               {common("nav.compare")}
-            </a>
-            <a
-              href={`/${locale}/instructions`}
-              className="hover:text-white transition"
-            >
+            </Link>
+            <Link href={`/${locale}/instructions`} className="hover:text-white transition">
               {common("nav.manual")}
-            </a>
+            </Link>
           </nav>
           <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/25">
-            <a href={`/${locale}/privacy`} className="hover:text-white transition">
+            <Link href={`/${locale}/privacy`} className="hover:text-white transition">
               {common("nav.privacy")}
-            </a>
-            <a href={`/${locale}/cookies`} className="hover:text-white transition">
+            </Link>
+            <Link href={`/${locale}/cookies`} className="hover:text-white transition">
               {common("nav.cookies")}
-            </a>
-            <a href={`/${locale}/terms`} className="hover:text-white transition">
+            </Link>
+            <Link href={`/${locale}/terms`} className="hover:text-white transition">
               {common("nav.terms")}
-            </a>
-            <a href={`/${locale}/legal`} className="hover:text-white transition">
+            </Link>
+            <Link href={`/${locale}/legal`} className="hover:text-white transition">
               {common("nav.legal")}
-            </a>
+            </Link>
           </nav>
         </div>
       </footer>

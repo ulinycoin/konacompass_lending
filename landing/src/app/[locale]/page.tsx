@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { use } from "react";
 import { useTranslations } from "next-intl";
 import WaitlistForm from "@/components/WaitlistForm";
@@ -517,19 +518,19 @@ function Footer({ locale }: { locale: string }) {
             </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
-                <a href={`/${locale}/compare`} className="transition hover:text-white">
+                <Link href={`/${locale}/compare`} className="transition hover:text-white">
                   {common("nav.compare")}
-                </a>
+                </Link>
               </p>
               <p>
-                <a href={`/${locale}/specs`} className="transition hover:text-white">
+                <Link href={`/${locale}/specs`} className="transition hover:text-white">
                   {common("nav.specs")}
-                </a>
+                </Link>
               </p>
               <p>
-                <a href={`/${locale}/instructions`} className="transition hover:text-white">
+                <Link href={`/${locale}/instructions`} className="transition hover:text-white">
                   {common("nav.manual")}
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -594,24 +595,24 @@ function Footer({ locale }: { locale: string }) {
             </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
-                <a href={`/${locale}/privacy`} className="transition hover:text-white">
+                <Link href={`/${locale}/privacy`} className="transition hover:text-white">
                   {common("nav.privacy")}
-                </a>
+                </Link>
               </p>
               <p>
-                <a href={`/${locale}/cookies`} className="transition hover:text-white">
+                <Link href={`/${locale}/cookies`} className="transition hover:text-white">
                   {common("nav.cookies")}
-                </a>
+                </Link>
               </p>
               <p>
-                <a href={`/${locale}/terms`} className="transition hover:text-white">
+                <Link href={`/${locale}/terms`} className="transition hover:text-white">
                   {common("nav.terms")}
-                </a>
+                </Link>
               </p>
               <p>
-                <a href={`/${locale}/legal`} className="transition hover:text-white">
+                <Link href={`/${locale}/legal`} className="transition hover:text-white">
                   {common("nav.legal")}
-                </a>
+                </Link>
               </p>
             </div>
           </div>
