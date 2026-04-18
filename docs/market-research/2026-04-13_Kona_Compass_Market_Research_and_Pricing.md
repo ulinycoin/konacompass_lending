@@ -63,7 +63,7 @@ Kona Compass is described as a **smart rotator for live sonar / live transducer 
 - Humminbird MEGA Live
 
 ### Current documented feature set
-- precision up to **0.3°**
+- precision up to **Unrivaled Precision**
 - compass
 - remote control
 - foot pedals
@@ -336,7 +336,7 @@ Kona Compass should not be sold as “another rotator.”
 It should be sold on the combination of:
 
 ### 8.1 Precision
-If the stated **0.3° precision** is real and demonstrable, this is a strong differentiator.
+If the stated **Unrivaled Precision precision** is real and demonstrable, this is a strong differentiator.
 
 ### 8.2 Control architecture
 The combination of:
