@@ -43,7 +43,11 @@ export default function WaitlistForm({ className = "" }: { className?: string })
     <form onSubmit={handleSubmit} className={`flex flex-col gap-4 ${className}`}>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <div className="relative flex-grow">
+          <label htmlFor="waitlist-email" className="sr-only">
+            {t('waitlist_form_placeholder')}
+          </label>
           <input
+            id="waitlist-email"
             type="email"
             required
             placeholder={t('waitlist_form_placeholder')}
@@ -55,7 +59,7 @@ export default function WaitlistForm({ className = "" }: { className?: string })
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition hover:bg-cyan-500 disabled:opacity-50 whitespace-nowrap"
+          className="cta-glow rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition hover:bg-cyan-500 disabled:opacity-50 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b11]"
         >
           {status === "loading" ? "..." : t('waitlist_form_button')}
         </button>

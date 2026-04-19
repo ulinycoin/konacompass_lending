@@ -6,15 +6,36 @@ import { use } from "react";
 import { useTranslations } from "next-intl";
 import WaitlistForm from "@/components/WaitlistForm";
 import Header from "@/components/Header";
+import SocialIcons from "@/components/SocialIcons";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kona Compass",
+  "brand": { "@type": "Brand", "name": "Kona Compass" },
+  "description": "Motorized transducer rotator for Garmin Panoptix LiveScope, Lowrance ActiveTarget and Humminbird MEGA Live. Features heading hold, auto search, direction lock, wireless remote, and control pedal.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "990",
+    "highPrice": "1190",
+    "availability": "https://schema.org/PreOrder",
+  },
+  "category": "Fishing Electronics Accessory",
+};
+
 function Hero() {
   const t = useTranslations("Index");
   return (
     <section className="relative overflow-hidden" style={{ minHeight: "calc(100vh - 57px)" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.18),rgba(3,7,18,0.72))]" />
       <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
         <Image
@@ -192,7 +213,7 @@ function Video() {
         <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl" style={{ paddingTop: "56.25%" }}>
           <iframe
             className="absolute inset-0 h-full w-full"
-            src="https://www.youtube.com/embed/cJWNJEUY7ug?rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/cJWNJEUY7ug?rel=0&modestbranding=1&cc_load_policy=1"
             title="Kona Compass in action"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -231,7 +252,7 @@ function Pricing() {
             </div>
 
             <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-              {t("pricing_title")}
+              {t("pricing_card_heading")}
             </p>
             <p className="mt-3 text-sm leading-6 text-white/40">
               {t("pricing_spots_note")}
@@ -239,11 +260,11 @@ function Pricing() {
 
             <a
               href="#waitlist"
-              className="mt-8 flex w-full items-center justify-center rounded-lg border border-cyan-500/40 bg-cyan-600/15 py-3 text-sm font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/25"
+              className="cta-glow mt-8 flex w-full items-center justify-center rounded-lg border border-cyan-500/40 bg-cyan-600/15 py-3 text-sm font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/25"
             >
               {t("pricing_cta")}
             </a>
-            <p className="mt-3 text-center text-xs text-white/30">
+            <p className="mt-3 text-center text-xs text-white/45">
               {t("pricing_hint")}
             </p>
           </div>
@@ -287,7 +308,7 @@ function Compatibility() {
                 className="object-contain brightness-0 invert opacity-70"
               />
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/30">Panoptix LiveScope</p>
+            <p className="text-xs uppercase tracking-wider text-white/45">Panoptix LiveScope</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_garmin_models")}
             </p>
@@ -300,7 +321,7 @@ function Compatibility() {
                 Lowrance
               </p>
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/30">ActiveTarget</p>
+            <p className="text-xs uppercase tracking-wider text-white/45">ActiveTarget</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_lowrance_models")}
             </p>
@@ -317,7 +338,7 @@ function Compatibility() {
                 className="object-contain brightness-0 invert opacity-70"
               />
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/30">MEGA Live</p>
+            <p className="text-xs uppercase tracking-wider text-white/45">MEGA Live</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_humminbird_models")}
             </p>
@@ -383,8 +404,22 @@ function FAQ() {
   const t = useTranslations("Index");
   const items = t.raw("faq_items") as { q: string; a: string }[];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a },
+    })),
+  };
+
   return (
     <section id="faq" className="border-t border-white/5 bg-[#071019] py-20 lg:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-12">
           <p className="text-xs uppercase tracking-[0.28em] text-white/40">
@@ -437,39 +472,21 @@ function WaitlistCTA() {
             </p>
             <div className="space-y-7">
               <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/30">
-                  Phone
-                </p>
-                <a
-                  href="tel:+37120546403"
-                  className="text-xl font-medium text-white transition hover:text-cyan-400"
-                >
-                  +371 20546403
-                </a>
-              </div>
-              <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/30">
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/45">
                   Email
                 </p>
                 <a
-                  href="mailto:konacompas@gmail.com"
+                  href="mailto:contact@konacompass.com"
                   className="text-xl font-medium text-white transition hover:text-cyan-400"
                 >
-                  konacompas@gmail.com
+                  contact@konacompass.com
                 </a>
               </div>
               <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/30">
-                  Instagram
+                <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-white/45">
+                  Social
                 </p>
-                <a
-                  href="https://www.instagram.com/konacompass/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-xl font-medium text-white transition hover:text-cyan-400"
-                >
-                  @konacompass
-                </a>
+                <SocialIcons />
               </div>
             </div>
           </div>
@@ -487,7 +504,7 @@ function Footer({ locale }: { locale: string }) {
   return (
     <footer className="border-t border-white/10 bg-[#050b11] py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.5fr_0.5fr_0.6fr_0.7fr]">
+        <div className="grid gap-10 lg:grid-cols-[1fr_0.5fr_0.6fr_0.7fr]">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-4">
@@ -511,10 +528,10 @@ function Footer({ locale }: { locale: string }) {
             </p>
           </div>
 
-          {/* Product pages */}
+          {/* Convince me */}
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
-              {common("footer_product")}
+              {common("footer_learn")}
             </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
@@ -527,35 +544,6 @@ function Footer({ locale }: { locale: string }) {
                   {common("nav.specs")}
                 </Link>
               </p>
-              <p>
-                <Link href={`/${locale}/instructions`} className="transition hover:text-white">
-                  {common("nav.manual")}
-                </Link>
-              </p>
-            </div>
-          </div>
-
-          {/* On this page */}
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
-              {common("footer_page")}
-            </p>
-            <div className="space-y-3 text-sm text-white/55">
-              <p>
-                <a href="#how-it-works" className="transition hover:text-white">
-                  {common("nav.how_it_works")}
-                </a>
-              </p>
-              <p>
-                <a href="#compatibility" className="transition hover:text-white">
-                  {common("nav.compatibility")}
-                </a>
-              </p>
-              <p>
-                <a href="#faq" className="transition hover:text-white">
-                  {common("nav.faq")}
-                </a>
-              </p>
             </div>
           </div>
 
@@ -566,25 +554,11 @@ function Footer({ locale }: { locale: string }) {
             </p>
             <div className="space-y-3 text-sm text-white/55">
               <p>
-                <a href="tel:+37120546403" className="transition hover:text-white">
-                  +371 20546403
+                <a href="mailto:contact@konacompass.com" className="transition hover:text-white">
+                  contact@konacompass.com
                 </a>
               </p>
-              <p>
-                <a href="mailto:konacompas@gmail.com" className="transition hover:text-white">
-                  konacompas@gmail.com
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://www.instagram.com/konacompass/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition hover:text-white"
-                >
-                  Instagram
-                </a>
-              </p>
+              <SocialIcons className="pt-1" />
             </div>
           </div>
 
@@ -619,7 +593,7 @@ function Footer({ locale }: { locale: string }) {
         </div>
 
         <div className="mt-12 border-t border-white/5 pt-8">
-          <p className="text-xs text-white/25">© 2026 Kona Compass. All rights reserved.</p>
+          <p className="text-xs text-white/40">© 2026 Kona Compass. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -636,7 +610,7 @@ export default function Home({
   const { locale } = use(params);
 
   return (
-    <main className="bg-[#050b11] text-white">
+    <main id="main-content" className="bg-[#050b11] text-white">
       <Header />
       <Hero />
       <Problem />

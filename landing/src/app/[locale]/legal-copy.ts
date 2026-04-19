@@ -286,9 +286,7 @@ const legalNotice: Record<Locale, LegalPageCopy> = {
       {
         title: "Contact details",
         paragraphs: [
-          "Email: konacompas@gmail.com",
-          "Phone: +371 20546403",
-          "Instagram: @konacompass",
+          "Email: contact@konacompass.com",
         ],
       },
       {
@@ -325,9 +323,7 @@ const legalNotice: Record<Locale, LegalPageCopy> = {
       {
         title: "Контактные данные",
         paragraphs: [
-          "Email: konacompas@gmail.com",
-          "Телефон: +371 20546403",
-          "Instagram: @konacompass",
+          "Email: contact@konacompass.com",
         ],
       },
       {

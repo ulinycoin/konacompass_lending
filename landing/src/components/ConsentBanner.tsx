@@ -81,21 +81,21 @@ export default function ConsentBanner() {
               <button
                 type="button"
                 onClick={() => store({ necessary: true, analytics: false, thirdParty: false })}
-                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10"
+                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 {t("banner_reject")}
               </button>
               <button
                 type="button"
                 onClick={() => setExpanded((value) => !value)}
-                className="rounded-lg border border-cyan-500/25 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-500/15"
+                className="rounded-lg border border-cyan-500/25 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-500/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
               >
                 {t("banner_manage")}
               </button>
               <button
                 type="button"
                 onClick={() => store({ necessary: true, analytics: true, thirdParty: true })}
-                className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-[#06131a] transition hover:bg-cyan-400"
+                className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-[#06131a] transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
               >
                 {t("banner_accept")}
               </button>
@@ -149,7 +149,7 @@ export default function ConsentBanner() {
                   <button
                     type="button"
                     onClick={() => setExpanded(false)}
-                    className="text-xs font-medium text-white/45 transition hover:text-white/75"
+                    className="text-xs font-medium text-white/45 transition hover:text-white/75 focus-visible:outline-none focus-visible:text-white/75"
                   >
                     {t("banner_close")}
                   </button>
@@ -162,7 +162,7 @@ export default function ConsentBanner() {
                         thirdParty: preferences.thirdParty,
                       })
                     }
-                    className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#06131a] transition hover:bg-white/90"
+                    className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#06131a] transition hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {t("banner_save")}
                   </button>

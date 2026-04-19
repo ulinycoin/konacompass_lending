@@ -62,7 +62,7 @@ export default function Specs({
   const kitContents = t.raw("kit") as string[];
 
   return (
-    <main className="bg-[#050b11] text-white min-h-screen font-sans">
+    <main id="main-content" className="bg-[#050b11] text-white min-h-screen font-sans">
       <Header />
 
       {/* Hero */}
@@ -224,7 +224,7 @@ export default function Specs({
               {common("footer_copy")}
             </p>
           </div>
-          <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
+          <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/45">
             <Link href={`/${locale}`} className="hover:text-white transition">
               {common("nav.home")}
             </Link>
@@ -235,7 +235,7 @@ export default function Specs({
               {common("nav.manual")}
             </Link>
           </nav>
-          <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/25">
+          <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/45">
             <Link href={`/${locale}/privacy`} className="hover:text-white transition">
               {common("nav.privacy")}
             </Link>

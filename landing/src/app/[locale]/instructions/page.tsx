@@ -6,6 +6,7 @@ import { use } from "react";
 import { useTranslations } from "next-intl";
 import Header from "@/components/Header";
 import WaitlistForm from "@/components/WaitlistForm";
+import SocialIcons from "@/components/SocialIcons";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -24,7 +25,7 @@ export default function InstructionsPage({
   const modeActivations = t.raw("mode_activations") as string[];
 
   return (
-    <main className="min-h-screen bg-[#050b11] text-white font-sans">
+    <main id="main-content" className="min-h-screen bg-[#050b11] text-white font-sans">
       <Header />
 
       {/* Hero */}
@@ -211,38 +212,20 @@ export default function InstructionsPage({
               <div className="space-y-8">
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">
-                    {t("contact_phone")}
-                  </p>
-                  <a
-                    href="tel:+37120546403"
-                    className="text-xl text-white font-medium hover:text-cyan-400 transition"
-                  >
-                    +371 20546403
-                  </a>
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">
                     {t("contact_email")}
                   </p>
                   <a
-                    href="mailto:konacompas@gmail.com"
+                    href="mailto:contact@konacompass.com"
                     className="text-xl text-white font-medium hover:text-cyan-400 transition"
                   >
-                    konacompas@gmail.com
+                    contact@konacompass.com
                   </a>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1">
+                  <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-3">
                     {t("contact_social")}
                   </p>
-                  <a
-                    href="https://www.instagram.com/konacompass/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xl text-white font-medium hover:text-cyan-400 transition"
-                  >
-                    @konacompass
-                  </a>
+                  <SocialIcons />
                 </div>
               </div>
             </div>
@@ -266,18 +249,12 @@ export default function InstructionsPage({
               {common("footer_copy")}
             </p>
           </div>
-          <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
+          <nav className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/45">
             <Link href={`/${locale}`} className="hover:text-white transition">
               {common("nav.home")}
             </Link>
-            <Link href={`/${locale}/specs`} className="hover:text-white transition">
-              {common("nav.specs")}
-            </Link>
-            <Link href={`/${locale}/compare`} className="hover:text-white transition">
-              {common("nav.compare")}
-            </Link>
           </nav>
-          <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/25">
+          <nav className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/45">
             <Link href={`/${locale}/privacy`} className="hover:text-white transition">
               {common("nav.privacy")}
             </Link>

@@ -48,6 +48,7 @@ function LocaleSwitcher() {
         className="flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70 transition hover:border-white/20 hover:text-white"
         aria-expanded={open}
         aria-haspopup="listbox"
+        aria-label="Change language"
       >
         <svg className="h-3.5 w-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3a13.5 13.5 0 010 18M12 3a13.5 13.5 0 000 18" />
@@ -118,6 +119,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-[#050b11]/80 backdrop-blur-md">
+      <a href="#main-content" className="skip-link">
+        {common("skip_to_content")}
+      </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
@@ -142,7 +146,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/55 transition hover:text-white"
+              className="text-sm font-medium text-white/55 transition hover:text-white focus-visible:outline-none focus-visible:text-white"
             >
               {link.label}
             </a>
@@ -155,7 +159,7 @@ export default function Header() {
 
           <a
             href={anchorHref("#waitlist")}
-            className="hidden rounded-lg border border-cyan-500/30 bg-cyan-600/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20 sm:block"
+            className="hidden rounded-lg border border-cyan-500/30 bg-cyan-600/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-400 transition hover:bg-cyan-600/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 sm:block"
           >
             {t("waitlist_form_button")}
           </a>
@@ -189,7 +193,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-white/60 transition hover:bg-white/5 hover:text-white"
+                className="rounded-lg px-3 py-3 text-sm font-medium text-white/60 transition hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
               >
                 {link.label}
               </a>

@@ -100,13 +100,8 @@ export default function LegalDocument({
               <p className="text-xs uppercase tracking-[0.28em] text-white/35">{contactTitle}</p>
               <div className="mt-3 space-y-2 text-sm text-white/55">
                 <p>
-                  <a href="tel:+37120546403" className="transition hover:text-white">
-                    +371 20546403
-                  </a>
-                </p>
-                <p>
-                  <a href="mailto:konacompas@gmail.com" className="transition hover:text-white">
-                    konacompas@gmail.com
+                  <a href="mailto:contact@konacompass.com" className="transition hover:text-white">
+                    contact@konacompass.com
                   </a>
                 </p>
               </div>

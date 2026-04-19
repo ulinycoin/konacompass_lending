@@ -19,44 +19,7 @@ export default function Compare({
   const tIndex = useTranslations("Index");
   const common = useTranslations("Common");
 
-  const comparisonData = [
-    {
-      feature: t("table.precision"),
-      konaValue: t("table.precision"),
-      premium: t("competitors.precision_premium"),
-      manual: t("competitors.precision_manual"),
-    },
-    {
-      feature: t("table.compatibility"),
-      konaValue: t("table.compatibility"),
-      premium: t("competitors.compat_premium"),
-      manual: t("competitors.compat_manual"),
-    },
-    {
-      feature: t("table.modes"),
-      konaValue: t("table.modes"),
-      premium: t("competitors.modes_premium"),
-      manual: t("competitors.modes_manual"),
-    },
-    {
-      feature: t("table.control"),
-      konaValue: t("table.control"),
-      premium: t("competitors.control_premium"),
-      manual: t("competitors.control_manual"),
-    },
-    {
-      feature: t("table.build"),
-      konaValue: t("table.build"),
-      premium: t("competitors.build_premium"),
-      manual: t("competitors.build_manual"),
-    },
-    {
-      feature: t("table.stability"),
-      konaValue: t("table.stability"),
-      premium: t("competitors.stability_premium"),
-      manual: t("competitors.stability_manual"),
-    },
-  ];
+  const rows = t.raw("rows") as { feature: string; kona: string; premium: string; manual: string }[];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -71,7 +34,7 @@ export default function Compare({
   };
 
   return (
-    <main className="bg-[#050b11] text-white min-h-screen">
+    <main id="main-content" className="bg-[#050b11] text-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -117,24 +80,22 @@ export default function Compare({
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
-                  {comparisonData.map((row) => (
+                  {rows.map((row) => (
                     <tr
                       key={row.feature}
                       className="hover:bg-white/[0.01] transition"
                     >
-                      <td className="py-6 px-6 font-medium text-white">
+                      <td className="py-5 px-6 text-xs font-semibold uppercase tracking-wider text-white/40">
                         {row.feature}
                       </td>
-                      <td className="py-6 px-6 text-cyan-100 font-medium">
+                      <td className="py-5 px-6 text-cyan-100 font-medium">
                         <div className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                          {row.konaValue}
+                          <span className="h-1.5 w-1.5 flex-none rounded-full bg-cyan-400" />
+                          {row.kona}
                         </div>
                       </td>
-                      <td className="py-6 px-6 text-white/40">{row.premium}</td>
-                      <td className="py-6 px-6 text-white/20 italic">
-                        {row.manual}
-                      </td>
+                      <td className="py-5 px-6 text-white/45">{row.premium}</td>
+                      <td className="py-5 px-6 text-white/45">{row.manual}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -234,12 +195,6 @@ export default function Compare({
             <Link href={`/${locale}/specs`} className="hover:text-white transition">
               {common("nav.specs")}
             </Link>
-            <a
-              href="mailto:konacompas@gmail.com"
-              className="hover:text-white transition"
-            >
-              {common("contact")}
-            </a>
           </nav>
           <nav className="flex flex-wrap gap-8 text-xs uppercase tracking-widest text-white/30">
             <Link href={`/${locale}/privacy`} className="hover:text-white transition">
