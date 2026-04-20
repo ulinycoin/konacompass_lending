@@ -134,7 +134,8 @@
     "waitlist_consent_start": "Я соглашаюсь получать новости о запуске и принимаю",
     "waitlist_consent_link": "политику конфиденциальности",
     "waitlist_consent_end": "в части обработки моего email.",
-    "waitlist_consent_error": "Подтвердите согласие, чтобы попасть в список."
+    "waitlist_consent_error": "Подтвердите согласие, чтобы попасть в список.",
+    "waitlist_error_generic": "Что-то пошло не так. Попробуйте ещё раз."
   },
 
   "Specs": {

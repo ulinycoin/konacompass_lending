@@ -134,7 +134,8 @@
     "waitlist_consent_start": "I agree to receive launch updates and accept the",
     "waitlist_consent_link": "privacy notice",
     "waitlist_consent_end": "for how my email is processed.",
-    "waitlist_consent_error": "Please confirm consent to join the list."
+    "waitlist_consent_error": "Please confirm consent to join the list.",
+    "waitlist_error_generic": "Something went wrong. Please try again."
   },
 
   "Specs": {

@@ -8,10 +8,6 @@ const isGithubPages = process.env.GITHUB_ACTIONS === "true";
 const basePath = isGithubPages ? "/KonaCompass" : "";
 
 const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
   trailingSlash: true,
   basePath,
   assetPrefix: isGithubPages ? `${basePath}/` : undefined,

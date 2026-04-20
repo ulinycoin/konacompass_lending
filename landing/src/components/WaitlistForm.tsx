@@ -25,9 +25,22 @@ export default function WaitlistForm({ className = "" }: { className?: string })
 
     setError("");
     setStatus("loading");
-    setTimeout(() => {
-      setStatus("success");
-    }, 1000);
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, locale }),
+      });
+      if (!res.ok) {
+        setStatus("error");
+        setError(t("waitlist_error_generic"));
+      } else {
+        setStatus("success");
+      }
+    } catch {
+      setStatus("error");
+      setError(t("waitlist_error_generic"));
+    }
   };
 
   if (status === "success") {
