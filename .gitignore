@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Strategy, research, and internal docs
+docs/
+assets/
+research/
+agent.md
+
+# Agent and Codex system
+.agents/
+.codex/

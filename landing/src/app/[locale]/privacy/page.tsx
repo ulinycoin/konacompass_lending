@@ -5,6 +5,10 @@ import { getPrivacyCopy } from "../legal-copy";
 
 const locales = ["en", "ru"] as const;
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function PrivacyPage({
   params,
 }: {

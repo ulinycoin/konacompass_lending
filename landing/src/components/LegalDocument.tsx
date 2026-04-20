@@ -19,6 +19,7 @@ type LegalDocumentProps = {
   footerTitle: string;
   footerText: string;
   contactTitle: string;
+  contactEmail: string;
   backLinkLabel: string;
 };
 
@@ -31,6 +32,7 @@ export default function LegalDocument({
   footerTitle,
   footerText,
   contactTitle,
+  contactEmail,
   backLinkLabel,
 }: LegalDocumentProps) {
   return (
@@ -100,8 +102,8 @@ export default function LegalDocument({
               <p className="text-xs uppercase tracking-[0.28em] text-white/35">{contactTitle}</p>
               <div className="mt-3 space-y-2 text-sm text-white/55">
                 <p>
-                  <a href="mailto:contact@konacompass.com" className="transition hover:text-white">
-                    contact@konacompass.com
+                  <a href={`mailto:${contactEmail}`} className="transition hover:text-white">
+                    {contactEmail}
                   </a>
                 </p>
               </div>

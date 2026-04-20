@@ -10,6 +10,7 @@ type LegalPageCopy = {
   footerTitle: string;
   footerText: string;
   contactTitle: string;
+  contactEmail: string;
   backLinkLabel: string;
 };
 
@@ -58,6 +59,7 @@ const privacy: Record<Locale, LegalPageCopy> = {
     footerTitle: "Website operator",
     footerText: "Kona Compass is a pre-launch brand site. Final company and legal entity details will be published before commercial launch.",
     contactTitle: "Contact",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "Back to home",
   },
   ru: {
@@ -104,6 +106,7 @@ const privacy: Record<Locale, LegalPageCopy> = {
     footerTitle: "Оператор сайта",
     footerText: "Kona Compass — это сайт бренда до запуска продаж. Финальные данные о компании и юридическом лице будут опубликованы до коммерческого старта.",
     contactTitle: "Контакты",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "На главную",
   },
 };
@@ -146,6 +149,7 @@ const cookies: Record<Locale, LegalPageCopy> = {
     footerTitle: "Cookie settings",
     footerText: "You can review or change your choices in the banner whenever it appears again on this browser.",
     contactTitle: "Contact",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "Back to home",
   },
   ru: {
@@ -185,6 +189,7 @@ const cookies: Record<Locale, LegalPageCopy> = {
     footerTitle: "Настройки cookies",
     footerText: "Вы можете пересмотреть выбор, когда баннер появится снова в этом браузере.",
     contactTitle: "Контакты",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "На главную",
   },
 };
@@ -227,6 +232,7 @@ const terms: Record<Locale, LegalPageCopy> = {
     footerTitle: "Pre-launch terms",
     footerText: "This page will be updated with final sales terms before orders can be placed.",
     contactTitle: "Contact",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "Back to home",
   },
   ru: {
@@ -266,6 +272,7 @@ const terms: Record<Locale, LegalPageCopy> = {
     footerTitle: "Предзапусковые условия",
     footerText: "Эта страница будет обновлена финальными условиями продаж до того, как можно будет оформить заказ.",
     contactTitle: "Контакты",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "На главную",
   },
 };
@@ -279,70 +286,58 @@ const legalNotice: Record<Locale, LegalPageCopy> = {
       {
         title: "Website operator",
         paragraphs: [
-          "Kona Compass operates this pre-launch brand website and is responsible for the content published here.",
-          "Final legal entity details should be added here before commercial launch, including the registered company name and business address.",
-        ],
-      },
-      {
-        title: "Contact details",
-        paragraphs: [
-          "Email: contact@konacompass.com",
+          "SIA \"ul-coin\", registered in Latvia, operates this website and is responsible for the content published here.",
         ],
       },
       {
         title: "Website purpose",
         paragraphs: [
-          "The site presents the brand, collects waitlist signups, and prepares visitors for a future pre-order launch.",
+          "The site presents the Kona Compass brand, collects waitlist signups, and prepares visitors for a future pre-order launch.",
           "It does not currently process paid orders.",
         ],
       },
       {
-        title: "Publication note",
+        title: "Applicable law",
         paragraphs: [
-          "Before pre-orders open, this page should be updated with the final legal entity, country of registration, and any other legally required corporate information.",
+          "This website is operated in accordance with the laws of the Republic of Latvia and applicable European Union regulations, including the General Data Protection Regulation (EU) 2016/679.",
         ],
       },
     ],
-    footerTitle: "Operator note",
-    footerText: "Add the final company registration details here before the site starts taking pre-orders.",
+    footerTitle: "Website operator",
+    footerText: "SIA \"ul-coin\" · Latvia · ulinycoin7@gmail.com",
     contactTitle: "Contact",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "Back to home",
   },
   ru: {
     eyebrow: "Юридическая информация",
     title: "Юридическая информация",
-    intro: "На этой странице указаны оператор сайта и контактная точка для бренда Kona Compass.",
+    intro: "На этой странице указан оператор сайта и контактная точка для бренда Kona Compass.",
     sections: [
       {
         title: "Оператор сайта",
         paragraphs: [
-          "Kona Compass управляет этим предзапусковым брендовым сайтом и отвечает за опубликованный здесь контент.",
-          "Перед коммерческим запуском сюда нужно добавить финальные данные о юридическом лице, включая зарегистрированное название компании и адрес.",
-        ],
-      },
-      {
-        title: "Контактные данные",
-        paragraphs: [
-          "Email: contact@konacompass.com",
+          "SIA \"ul-coin\", зарегистрированная в Латвии, управляет этим сайтом и несёт ответственность за опубликованный здесь контент.",
         ],
       },
       {
         title: "Назначение сайта",
         paragraphs: [
-          "Сайт представляет бренд, собирает записи в лист ожидания и готовит аудиторию к будущему предзаказу.",
+          "Сайт представляет бренд Kona Compass, собирает записи в лист ожидания и готовит аудиторию к будущему предзаказу.",
           "Сейчас на нём не обрабатываются платные заказы.",
         ],
       },
       {
-        title: "Примечание к публикации",
+        title: "Применимое право",
         paragraphs: [
-          "До открытия предзаказа эту страницу нужно обновить финальными данными о юридическом лице, стране регистрации и другой обязательной корпоративной информацией.",
+          "Сайт работает в соответствии с законодательством Латвийской Республики и применимыми регуляциями Европейского союза, включая Общий регламент о защите данных (EU) 2016/679.",
         ],
       },
     ],
-    footerTitle: "Примечание оператора",
-    footerText: "Добавьте сюда финальные регистрационные данные компании до старта предзаказа.",
+    footerTitle: "Оператор сайта",
+    footerText: "SIA \"ul-coin\" · Латвия · ulinycoin7@gmail.com",
     contactTitle: "Контакты",
+    contactEmail: "ulinycoin7@gmail.com",
     backLinkLabel: "На главную",
   },
 };
