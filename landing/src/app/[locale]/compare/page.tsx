@@ -26,7 +26,7 @@ export default function Compare({
     "@type": "WebPage",
     name: "Kona Compass vs Competitors | Live Sonar Rotator Comparison",
     description:
-      "Compare Kona Compass with premium motorized mounts and manual poles.",
+      "Compare Kona Compass motorized transducer rotator vs SonarPointer, LiveScanner, and manual poles — heading hold, auto search, compatibility, and build quality.",
     mainEntity: {
       "@type": "Table",
       about: "Comparison of live sonar transducer rotators",
@@ -105,6 +105,26 @@ export default function Compare({
         </div>
       </section>
 
+      {/* Competitor context */}
+      <section className="pb-4">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-white/5 bg-white/[0.01] px-8 py-7 text-sm text-white/50 leading-7 space-y-4">
+            <p>
+              <span className="text-white font-medium">SonarPointer (S-Pointer)</span> is the closest direct competitor — a motorized rotator with foot pedal and autoscan. It works with select systems but does not offer a built-in heading hold based on an integrated orientation sensor. Cross-brand compatibility is limited.
+            </p>
+            <p>
+              <span className="text-white font-medium">LiveScanner</span> takes a different approach: it integrates with the trolling motor for hands-free rotation. This requires a compatible trolling motor and does not work as a standalone mount. Anglers who use a different motor or a stationary setup are excluded.
+            </p>
+            <p>
+              <span className="text-white font-medium">Manual poles</span> (Traxstech, RAM, DIY builds) give universal fit and low cost but offer no motorized control, no heading hold, and no auto search. Every direction change is manual.
+            </p>
+            <p>
+              Kona Compass is the only motorized transducer rotator with a built-in orientation system, heading hold across all four operating modes, and full compatibility with Garmin, Lowrance, and Humminbird — without requiring a specific trolling motor.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Deep Dive */}
       <section className="py-24 bg-[#071019]">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -149,12 +169,27 @@ export default function Compare({
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 aspect-video lg:aspect-square">
               <Image
                 src={`${basePath}/konacompas-old/image-4.png`}
-                alt="Kona Compass installed on a boat"
+                alt="Kona Compass live sonar transducer rotator — compatible with Garmin LiveScope, Lowrance ActiveTarget, Humminbird MEGA Live"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cross-links */}
+      <section className="py-12 border-t border-white/5 bg-[#050b11]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-8 text-sm text-white/40">
+          <Link href={`/${locale}/specs`} className="hover:text-white transition">
+            Technical specifications →
+          </Link>
+          <Link href={`/${locale}/instructions`} className="hover:text-white transition">
+            Operating guide →
+          </Link>
+          <Link href={`/${locale}`} className="hover:text-white transition">
+            Join the waitlist →
+          </Link>
         </div>
       </section>
 

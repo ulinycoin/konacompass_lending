@@ -1,0 +1,55 @@
+# Kona Compass
+
+> Kona Compass is a professional-grade motorized transducer rotator for live sonar fishing systems. It gives anglers precise, heading-based control over transducer direction — with heading hold, auto search, direction lock, wireless remote, and foot pedal. Pre-order stage.
+
+Kona Compass solves the core problem of manual transducer mounts: they have no mechanism to hold heading. Current, wind, and boat movement cause the transducer to drift off target continuously. Kona Compass replaces manual correction with a motorized heading control system that reacts in real time using a built-in orientation sensor.
+
+## Compatible systems
+
+- Garmin Panoptix LiveScope — LVS32, LVS34, LVS34-IF
+- Lowrance ActiveTarget — ActiveTarget, ActiveTarget 2, ActiveTarget 2 XL
+- Humminbird MEGA Live Imaging
+
+Compatibility is not brand-locked. The rotator works across all three major live sonar platforms.
+
+## Key features
+
+- **Heading hold** — locks onto a compass heading and corrects drift automatically. No manual input required during fishing.
+- **Auto search** — sweeps a configurable sector angle automatically. Hands-free coverage of water while searching for fish.
+- **Direction lock** — fixes a precise heading rigidly for repeatable, fixed positioning on structure.
+- **Manual mode** — direct motorized control via foot pedal or wireless remote. Instant response.
+- **Wireless remote** — full control from anywhere on the boat. Included in the box.
+- **Foot pedal (control pedal)** — dual-switch pedal for speed and sector adjustment. Included in the box.
+
+## Construction
+
+- 100% marine-grade stainless steel — zero aluminum, eliminating galvanic corrosion risk in saltwater
+- Hermetically sealed housing — protects sensors and motor from saltwater, spray, and humidity
+- Speed protection — mounting bracket folds automatically at higher boat speeds
+- Maintenance-free internals — composite bearings, no greasing required
+- Temperature range: −10°C to +60°C storage
+
+## Pricing
+
+€990–1190. Pre-order. Waitlist open at konacompass.com.
+
+## Pages
+
+- [Home / Waitlist](https://konacompass.com/en): Product overview, operating modes, compatibility, FAQ, waitlist signup
+- [Technical Specifications](https://konacompass.com/en/specs): Full spec table, kit contents, build details
+- [Comparison](https://konacompass.com/en/compare): Kona Compass vs SonarPointer, LiveScanner, and manual poles — feature-by-feature
+- [Operating Guide](https://konacompass.com/en/instructions): How to use each mode, speed adjustment, sector adjustment
+- [Blog: Why LiveScope Transducer Drifts](https://konacompass.com/en/blog/why-livescope-transducer-drifts): Explains the root cause of transducer drift and how heading hold fixes it
+- [Blog: Manual vs Motorized Transducer Control](https://konacompass.com/en/blog/manual-vs-motorized-transducer-control): Direct comparison for tournament anglers
+
+## Competitors
+
+- **SonarPointer (S-Pointer)** — motorized rotator, foot pedal, autoscan. No built-in orientation sensor for true heading hold. Limited cross-brand compatibility.
+- **LiveScanner** — integrates with trolling motor for hands-free rotation. Requires compatible trolling motor; does not work as standalone mount.
+- **Manual poles** (Traxstech, RAM, DIY) — universal fit, no motorized control, no heading hold, no auto search.
+
+Kona Compass is the only motorized transducer rotator with a built-in orientation system, heading hold across four operating modes, and full compatibility with Garmin, Lowrance, and Humminbird without requiring a specific trolling motor.
+
+## Contact
+
+contact@konacompass.com

@@ -115,6 +115,7 @@ export default function Header() {
     { href: anchorHref("#how-it-works"), label: common("nav.how_it_works") },
     { href: anchorHref("#compatibility"), label: common("nav.compatibility") },
     { href: anchorHref("#faq"), label: common("nav.faq") },
+    { href: `/${currentLocale}/blog`, label: "Blog" },
   ];
 
   return (

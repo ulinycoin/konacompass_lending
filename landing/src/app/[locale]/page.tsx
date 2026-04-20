@@ -40,7 +40,7 @@ function Hero() {
       <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
         <Image
           src={`${basePath}/konacompas-old/image-3.png`}
-          alt="Kona Compass on the water"
+          alt="Kona Compass motorized transducer rotator for live sonar — installed on a boat"
           fill
           className="object-cover object-center"
           priority
@@ -177,7 +177,7 @@ function HowItWorks() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 lg:aspect-auto lg:h-full lg:min-h-[480px]">
             <Image
               src={`${basePath}/konacompas-old/image-4.png`}
-              alt="Kona Compass installed on a boat"
+              alt="Kona Compass transducer rotator — heading hold and auto search modes in operation"
               fill
               className="object-cover"
             />
@@ -443,6 +443,64 @@ function FAQ() {
   );
 }
 
+// ─── Blog Teaser ──────────────────────────────────────────────────────────────
+
+const blogTeaserContent = {
+  en: {
+    label: "From the blog", title: "Live sonar guides.", all: "All articles →",
+    posts: [
+      { slug: "why-livescope-transducer-drifts", h: "Why Your LiveScope Transducer Keeps Drifting — and How to Fix It", excerpt: "Manual mounts have no heading hold. Every current and boat turn moves your transducer off target. Here is what actually fixes it.", read: "Read →" },
+      { slug: "manual-vs-motorized-transducer-control", h: "Manual vs Motorized Transducer Control: What Tournament Anglers Need to Know", excerpt: "A direct comparison of manual poles and motorized rotators — reaction time, precision, and what changes when heading hold enters the equation.", read: "Read →" },
+    ],
+  },
+  ru: {
+    label: "Из блога", title: "Гайды по live sonar.", all: "Все статьи →",
+    posts: [
+      { slug: "why-livescope-transducer-drifts", h: "Почему датчик LiveScope постоянно смещается — и как это исправить", excerpt: "Ручные крепления не удерживают направление. Каждое течение и манёвр лодки сбивают live sonar с цели. Разбираем, что реально помогает.", read: "Читать →" },
+      { slug: "manual-vs-motorized-transducer-control", h: "Ручное vs моторизованное управление датчиком: что нужно знать спортивным рыболовам", excerpt: "Прямое сравнение ручных штанг и моторизованных ротаторов — время реакции, точность и что меняется с удержанием курса.", read: "Читать →" },
+    ],
+  },
+} as const;
+
+function BlogTeaser({ locale }: { locale: string }) {
+  const c = blogTeaserContent[locale as keyof typeof blogTeaserContent] ?? blogTeaserContent.en;
+
+  return (
+    <section className="border-t border-white/5 py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-white/40">{c.label}</p>
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">{c.title}</h2>
+          </div>
+          <Link href={`/${locale}/blog`} className="hidden text-sm text-cyan-400 hover:text-cyan-300 transition sm:block">
+            {c.all}
+          </Link>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {c.posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/${locale}/blog/${post.slug}`}
+              className="group rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition hover:border-white/10 hover:bg-white/[0.04]"
+            >
+              <p className="mb-3 text-xs uppercase tracking-widest text-cyan-400/70">Live Sonar</p>
+              <h3 className="text-lg font-semibold text-white leading-snug group-hover:text-cyan-300 transition">{post.h}</h3>
+              <p className="mt-3 text-sm text-white/45 leading-6">{post.excerpt}</p>
+              <p className="mt-6 text-sm text-cyan-400 group-hover:text-cyan-300 transition">{post.read}</p>
+            </Link>
+          ))}
+        </div>
+
+        <Link href={`/${locale}/blog`} className="mt-6 block text-sm text-cyan-400 hover:text-cyan-300 transition sm:hidden">
+          {c.all}
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 // ─── Waitlist CTA ─────────────────────────────────────────────────────────────
 
 function WaitlistCTA() {
@@ -620,6 +678,7 @@ export default function Home({
       <Build />
       <Pricing />
       <FAQ />
+      <BlogTeaser locale={locale} />
       <WaitlistCTA />
       <Footer locale={locale} />
     </main>

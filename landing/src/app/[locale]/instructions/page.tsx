@@ -24,8 +24,56 @@ export default function InstructionsPage({
   const quickStartItems = t.raw("quick_start_items") as string[];
   const modeActivations = t.raw("mode_activations") as string[];
 
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use Kona Compass motorized transducer rotator",
+    "description": "How to control the Kona Compass live sonar transducer rotator: switching modes, heading hold, auto search, direction lock, and adjusting rotation speed.",
+    "tool": [
+      { "@type": "HowToTool", "name": "Kona Compass rotator unit" },
+      { "@type": "HowToTool", "name": "Wireless remote control" },
+      { "@type": "HowToTool", "name": "Control pedal" },
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Power on — Manual Mode",
+        "text": "On power-on the device enters Manual Mode automatically. Use the control pedal to rotate the transducer left or right.",
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Activate Direction Hold (heading hold)",
+        "text": "Short-press the main button to engage Direction Hold. The rotator locks onto the current heading and corrects automatically for current and wind.",
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Activate Auto Search",
+        "text": "Hold the main button for 2 seconds to start Auto Search. The rotator sweeps a configurable sector automatically without continuous input.",
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Activate Direction Lock",
+        "text": "Hold the main button for 3 seconds to engage Direction Lock. Locks a precise heading for repeatable, fixed positioning.",
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Adjust rotation speed",
+        "text": "Click the Right button to increase speed level; hold the Right button to decrease. Five levels available.",
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Adjust Auto Search sector width",
+        "text": "In Auto Search mode, click the Right button to widen the sweep sector; hold to narrow it.",
+      },
+    ],
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-[#050b11] text-white font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <Header />
 
       {/* Hero */}

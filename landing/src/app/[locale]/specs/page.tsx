@@ -61,8 +61,34 @@ export default function Specs({
 
   const kitContents = t.raw("kit") as string[];
 
+  const specsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Kona Compass",
+    "brand": { "@type": "Brand", "name": "Kona Compass" },
+    "description": "Motorized transducer rotator for Garmin Panoptix LiveScope, Lowrance ActiveTarget and Humminbird MEGA Live. Features heading hold, auto search, direction lock, wireless remote, and control pedal.",
+    "category": "Fishing Electronics Accessory",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "990",
+      "highPrice": "1190",
+      "availability": "https://schema.org/PreOrder",
+    },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "Housing", "value": "Hermetically sealed marine-grade stainless steel" },
+      { "@type": "PropertyValue", "name": "Operating Modes", "value": "Manual, Direction Hold, Auto Search, Direction Lock" },
+      { "@type": "PropertyValue", "name": "Controls", "value": "Wireless remote + control pedal (included)" },
+      { "@type": "PropertyValue", "name": "Compatibility", "value": "Garmin Panoptix LiveScope LVS32 LVS34 LVS34-IF, Lowrance ActiveTarget AT2 AT2 XL, Humminbird MEGA Live" },
+    ],
+  };
+
   return (
     <main id="main-content" className="bg-[#050b11] text-white min-h-screen font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(specsJsonLd) }}
+      />
       <Header />
 
       {/* Hero */}
@@ -186,6 +212,21 @@ export default function Specs({
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Cross-links */}
+      <section className="py-12 border-t border-white/5 bg-[#050b11]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-8 text-sm text-white/40">
+          <Link href={`/${locale}/compare`} className="hover:text-white transition">
+            Compare vs competitors →
+          </Link>
+          <Link href={`/${locale}/instructions`} className="hover:text-white transition">
+            Operating guide →
+          </Link>
+          <Link href={`/${locale}`} className="hover:text-white transition">
+            Join the waitlist →
+          </Link>
         </div>
       </section>
 

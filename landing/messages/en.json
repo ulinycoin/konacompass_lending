@@ -15,15 +15,15 @@
     "problem_title": "Manual transducer control is the weak point in every live sonar setup.",
     "problem_body": "Live sonar gives anglers a real advantage — but only when the transducer rotator keeps up. Kona Compass replaces constant manual correction with motorized heading control that reacts instantly when direction needs to change.",
     "problem_bullets": [
-      "Difficult to hold a stable direction on target",
+      "LiveScope transducer keeps drifting or rotating in current",
+      "LiveScope not pointing in the right direction after turns",
       "Too much manual correction while actively fishing",
-      "Slow reaction when fish or conditions change",
       "Attention pulled away from the water"
     ],
 
     "how_label": "How it works",
     "how_title": "Kona Compass makes live-sonar control feel natural.",
-    "how_body": "Simple controls, heading-based positioning, and a straightforward workflow make Kona Compass easy to understand as a heading-based control system.",
+    "how_body": "Live sonar heading hold, auto search, and direct manual control — three modes that cover every on-water scenario without constant correction.",
     "how_modes_title": "Operating modes",
     "how_modes": [
       {
@@ -112,6 +112,14 @@
       {
         "q": "Do you ship internationally?",
         "a": "Yes. Shipping regions and details will be confirmed before launch. Contact us directly if you have a specific question about your location."
+      },
+      {
+        "q": "Why does my LiveScope transducer keep moving or drifting?",
+        "a": "Manual transducer mounts have no mechanism to hold heading — any current, wave, or boat movement causes the transducer to drift off direction. Kona Compass solves this with motorized heading hold that maintains the set direction automatically."
+      },
+      {
+        "q": "How do I hold my live sonar transducer in one direction?",
+        "a": "Kona Compass Direction Hold mode locks your transducer to the set heading automatically. No manual input needed — the motor corrects drift continuously so you can focus on fishing."
       }
     ],
 
@@ -193,13 +201,13 @@
   },
 
   "Compare": {
-    "title": "Kona Compass vs Premium Brand Mounts and Manual Poles.",
-    "subtitle": "See how Kona Compass motorized transducer rotator compares to brand-locked mounts and manual poles — heading control, compatibility, build quality, and auto search.",
+    "title": "Kona Compass vs SonarPointer, LiveScanner, and Manual Poles.",
+    "subtitle": "How does Kona Compass compare to SonarPointer, LiveScanner, and manual poles? Heading hold, cross-brand compatibility, auto search, and build quality — side by side.",
     "hero_badge": "Comparison",
     "table": {
       "feature": "Parameter",
       "kona": "Kona Compass",
-      "premium": "Premium Brands",
+      "premium": "SonarPointer / LiveScanner",
       "manual": "Manual Poles"
     },
     "rows": [
