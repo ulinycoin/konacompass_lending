@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
+import indexNowConfig from "../../indexnow.config.json";
 
-const siteUrl = "https://konacompass.com";
-const locales = ["en", "ru"];
-const pages = ["", "/specs", "/compare", "/instructions", "/blog", "/blog/why-livescope-transducer-drifts", "/blog/manual-vs-motorized-transducer-control"];
+const { siteUrl, locales, pages } = indexNowConfig;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -10,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of locales) {
     for (const page of pages) {
       entries.push({
-        url: `${siteUrl}/${locale}${page}`,
+        url: `${siteUrl}/${locale}${page}/`,
         lastModified: new Date(),
         changeFrequency: page === "" ? "weekly" : "monthly",
         priority: page === "" ? 1.0 : 0.8,

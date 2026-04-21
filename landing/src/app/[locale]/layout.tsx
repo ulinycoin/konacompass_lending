@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import ConsentBanner from "@/components/ConsentBanner";
+import "../globals.css";
 
 const siteUrl = "https://konacompass.com";
 const ogImage = `${siteUrl}/branding/og-image.png`;
@@ -71,11 +72,20 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div lang={locale} data-locale={locale} id="root">
-        {children}
-        <ConsentBanner />
-      </div>
-    </NextIntlClientProvider>
+    <html lang={locale} translate="no">
+      <head>
+        <meta name="google-site-verification" content="v_gWYPGKeWcwl3vXAyGbjwNNa4IiY1MWGs815JC1wWI" />
+        <meta name="msvalidate.01" content="763CFC8CA4F13B4D2C8A131618CB3670" />
+        <meta name="google" content="notranslate" />
+      </head>
+      <body className="antialiased">
+        <NextIntlClientProvider messages={messages}>
+          <div data-locale={locale} id="root">
+            {children}
+            <ConsentBanner />
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

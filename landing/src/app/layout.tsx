@@ -4,6 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Kona Compass",
   description: "Kona Compass pre-launch landing page.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-icon.png",
+  },
   other: {
     "google": "notranslate",
   },
@@ -14,9 +21,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" translate="no">
-      <body className="antialiased">{children}</body>
-    </html>
-  );
+  return children;
 }
