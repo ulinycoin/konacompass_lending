@@ -1,27 +1,52 @@
 import type { Metadata } from "next";
 
 const siteUrl = "https://konacompass.com";
+const ogImage = `${siteUrl}/branding/og-image.png`;
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
   const { locale } = await params;
   if (locale === 'ru') {
+    const title = "Сравнение ротаторов | Kona Compass vs конкуренты";
+    const description = "Kona Compass vs брендовые крепления и ручные штанги. Удержание курса, совместимость с Garmin Panoptix, Lowrance ActiveTarget, Humminbird MEGA Live.";
+    const url = `${siteUrl}/ru/compare/`;
     return {
-      title: "Сравнение ротаторов | Kona Compass vs конкуренты",
-      description: "Сравните Kona Compass с брендовыми креплениями и ручными штангами. Удержание курса, совместимость с Garmin Panoptix, Lowrance ActiveTarget, Humminbird MEGA Live, конструкция из нержавеющей стали.",
+      title,
+      description,
       alternates: {
-        canonical: `${siteUrl}/ru/compare/`,
-        languages: { en: `${siteUrl}/en/compare/`, ru: `${siteUrl}/ru/compare/`, "x-default": `${siteUrl}/en/compare/` },
+        canonical: url,
+        languages: { en: `${siteUrl}/en/compare/`, ru: url, "x-default": `${siteUrl}/en/compare/` },
+      },
+      openGraph: {
+        title,
+        description,
+        url,
+        siteName: "Kona Compass",
+        images: [{ url: ogImage, width: 1200, height: 630 }],
+        locale: "ru_RU",
+        type: "website",
       },
     };
   }
+  const title = "Rotator Comparison | Kona Compass vs Brand Mounts";
+  const description = "Compare Kona Compass motorized rotator vs brand mounts and manual poles. Heading hold, multi-platform compatibility, stainless build, auto search.";
+  const url = `${siteUrl}/en/compare/`;
   return {
-    title: "Rotator Comparison | Kona Compass vs Brand Mounts & Manual Poles",
-    description: "Compare Kona Compass motorized transducer rotator against premium brand mounts and manual poles. Heading control, multi-platform compatibility, stainless steel build, auto search — side by side.",
+    title,
+    description,
     alternates: {
-      canonical: `${siteUrl}/en/compare/`,
-      languages: { en: `${siteUrl}/en/compare/`, ru: `${siteUrl}/ru/compare/`, "x-default": `${siteUrl}/en/compare/` },
+      canonical: url,
+      languages: { en: url, ru: `${siteUrl}/ru/compare/`, "x-default": url },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Kona Compass",
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+      locale: "en_US",
+      type: "website",
     },
   };
 }

@@ -18,18 +18,19 @@ export async function generateMetadata(
   const { locale } = await params;
   if (locale === 'ru') {
     const title = "Kona Compass | Ротатор датчика для Panoptix LiveScope и ActiveTarget";
-    const description = "Электрический ротатор датчика live sonar для Garmin Panoptix LiveScope, Lowrance ActiveTarget и Humminbird MEGA Live. Удержание курса, автопоиск, беспроводной пульт. €990–1190.";
+    const description = "Моторизованный ротатор датчика live sonar для Garmin Panoptix LiveScope, Lowrance ActiveTarget и Humminbird MEGA Live. Удержание курса, автопоиск, пульт.";
+    const url = `${siteUrl}/ru/`;
     return {
       title,
       description,
       alternates: {
-        canonical: `${siteUrl}/ru`,
-        languages: { "en": `${siteUrl}/en`, "ru": `${siteUrl}/ru`, "x-default": `${siteUrl}/en` },
+        canonical: url,
+        languages: { "en": `${siteUrl}/en/`, "ru": url, "x-default": `${siteUrl}/en/` },
       },
       openGraph: {
         title,
         description,
-        url: `${siteUrl}/ru`,
+        url,
         siteName: "Kona Compass",
         images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass — ротатор датчика live sonar" }],
         locale: "ru_RU",
@@ -40,17 +41,18 @@ export async function generateMetadata(
   }
   const title = "Kona Compass | Motorized Transducer Rotator for Live Sonar";
   const description = "Motorized live sonar transducer rotator for Garmin Panoptix LiveScope, Lowrance ActiveTarget & Humminbird MEGA Live. Heading hold, auto search, wireless remote.";
+  const url = `${siteUrl}/en/`;
   return {
     title,
     description,
     alternates: {
-      canonical: `${siteUrl}/en`,
-      languages: { "en": `${siteUrl}/en`, "ru": `${siteUrl}/ru`, "x-default": `${siteUrl}/en` },
+      canonical: url,
+      languages: { "en": url, "ru": `${siteUrl}/ru/`, "x-default": url },
     },
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/en`,
+      url,
       siteName: "Kona Compass",
       images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass motorized transducer rotator for live sonar" }],
       locale: "en_US",
