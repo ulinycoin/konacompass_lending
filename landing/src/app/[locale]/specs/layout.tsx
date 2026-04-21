@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+const siteUrl = "https://konacompass.com";
+
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
@@ -8,11 +10,19 @@ export async function generateMetadata(
     return {
       title: "Технические характеристики | Kona Compass Ротатор датчика",
       description: "Ключевые характеристики ротатора Kona Compass: режимы работы, скорость вращения, угол сканирования, совместимость с Garmin, Lowrance, Humminbird. По детальным вопросам — свяжитесь с производителем.",
+      alternates: {
+        canonical: `${siteUrl}/ru/specs/`,
+        languages: { en: `${siteUrl}/en/specs/`, ru: `${siteUrl}/ru/specs/`, "x-default": `${siteUrl}/en/specs/` },
+      },
     };
   }
   return {
     title: "Technical Specifications | Kona Compass Transducer Rotator",
     description: "Key specs for Kona Compass transducer rotator: operating modes, rotation speed, scanning range, Garmin/Lowrance/Humminbird compatibility. For detailed questions contact the manufacturer.",
+    alternates: {
+      canonical: `${siteUrl}/en/specs/`,
+      languages: { en: `${siteUrl}/en/specs/`, ru: `${siteUrl}/ru/specs/`, "x-default": `${siteUrl}/en/specs/` },
+    },
   };
 }
 
