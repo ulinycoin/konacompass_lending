@@ -7,7 +7,6 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY!
 );
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 function buildEmailHtml(lang: "en" | "ru"): string {
   const t = {
@@ -171,6 +170,7 @@ export async function POST(req: Request) {
 
   const lang = locale === "ru" ? "ru" : "en";
   const { subject, html } = CONFIRMATION_EMAILS[lang];
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { error: emailError } = await resend.emails.send({
     from: "Kona Compass <noreply@konacompass.com>",
     to: email,
@@ -178,7 +178,9 @@ export async function POST(req: Request) {
     html,
   });
   if (emailError) {
-    console.error("Resend error:", emailError);
+    console.error("Resend error:", JSON.stringify(emailError));
+  } else {
+    console.log("Resend: email sent to", email);
   }
 
   return NextResponse.json({ ok: true });
