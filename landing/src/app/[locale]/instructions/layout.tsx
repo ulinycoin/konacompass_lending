@@ -23,10 +23,11 @@ export async function generateMetadata(
         description,
         url,
         siteName: "Kona Compass",
-        images: [{ url: ogImage, width: 1200, height: 630 }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass — инструкция по режимам работы ротатора" }],
         locale: "ru_RU",
         type: "website",
       },
+      twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
   const title = "Instructions | Kona Compass Operating Modes & Control Guide";
@@ -44,10 +45,11 @@ export async function generateMetadata(
       description,
       url,
       siteName: "Kona Compass",
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass transducer rotator operating modes and control guide" }],
       locale: "en_US",
       type: "website",
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

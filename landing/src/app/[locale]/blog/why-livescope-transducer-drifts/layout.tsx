@@ -24,10 +24,11 @@ export async function generateMetadata(
         description,
         url,
         siteName: "Kona Compass",
-        images: [{ url: ogImage, width: 1200, height: 630 }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: "Почему датчик LiveScope смещается — и как это исправить" }],
         locale: "ru_RU",
         type: "article",
       },
+      twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
   const title = "Why Your LiveScope Transducer Keeps Drifting — Fix It";
@@ -45,10 +46,11 @@ export async function generateMetadata(
       description,
       url,
       siteName: "Kona Compass",
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Why Your LiveScope Transducer Keeps Drifting — Fix It" }],
       locale: "en_US",
       type: "article",
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { use } from "react";
+import { use, useState } from "react";
 import { useTranslations } from "next-intl";
 import WaitlistForm from "@/components/WaitlistForm";
 import Header from "@/components/Header";
@@ -23,6 +23,7 @@ const productSchema = {
     "priceCurrency": "EUR",
     "lowPrice": "990",
     "highPrice": "1190",
+    "offerCount": "2",
     "availability": "https://schema.org/PreOrder",
   },
   "category": "Fishing Electronics Accessory",
@@ -44,6 +45,8 @@ function Hero() {
           fill
           className="object-cover object-center"
           priority
+          fetchPriority="high"
+          sizes="(min-width: 1024px) 58vw, 100vw"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,17,0.97)_0%,rgba(5,11,17,0.78)_26%,rgba(5,11,17,0.28)_56%,rgba(5,11,17,0.10)_100%)] lg:bg-[linear-gradient(90deg,rgba(5,11,17,1)_0%,rgba(5,11,17,0.90)_28%,rgba(5,11,17,0.18)_66%,rgba(5,11,17,0.06)_100%)]" />
       </div>
@@ -65,7 +68,7 @@ function Hero() {
             </p>
           </div>
           <WaitlistForm className="mt-10 max-w-md" />
-          <p className="mt-4 text-xs text-white/40">
+          <p className="mt-4 text-xs text-white/55">
             {t("hero_limited")} {t("hero_social_proof")}
           </p>
         </div>
@@ -84,7 +87,7 @@ function Problem() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-start">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("problem_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -124,7 +127,7 @@ function HowItWorks() {
         {/* Title row */}
         <div className="mb-16 grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("how_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -139,7 +142,7 @@ function HowItWorks() {
         {/* Modes + image */}
         <div className="grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start">
           <div>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-white/40">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
               {t("how_modes_title")}
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -156,7 +159,7 @@ function HowItWorks() {
 
             {/* Controls */}
             <div className="mt-10">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-white/40">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
                 {t("how_controls_title")}
               </p>
               <div className="grid gap-3 sm:grid-cols-3">
@@ -180,6 +183,7 @@ function HowItWorks() {
               alt="Kona Compass transducer rotator — heading hold and auto search modes in operation"
               fill
               className="object-cover"
+              sizes="(min-width: 1024px) 420px, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050b11]/60 via-transparent to-transparent" />
           </div>
@@ -191,6 +195,51 @@ function HowItWorks() {
 
 // ─── Video ────────────────────────────────────────────────────────────────────
 
+const YT_ID = "cJWNJEUY7ug";
+
+function YouTubeFacade() {
+  const [active, setActive] = useState(false);
+
+  if (active) {
+    return (
+      <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl" style={{ paddingTop: "56.25%" }}>
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src={`https://www.youtube.com/embed/${YT_ID}?rel=0&modestbranding=1&cc_load_policy=1&autoplay=1`}
+          title="Kona Compass in action"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setActive(true)}
+      aria-label="Play video: Kona Compass in action"
+      className="group relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
+      style={{ paddingTop: "56.25%" }}
+    >
+      <img
+        src={`https://i.ytimg.com/vi/${YT_ID}/maxresdefault.jpg`}
+        alt="Kona Compass in action — video preview"
+        className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="absolute inset-0 bg-[#050b11]/40 transition group-hover:bg-[#050b11]/30" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-[#050b11]/60 transition group-hover:bg-[#050b11]/80 sm:h-20 sm:w-20">
+          <svg className="h-6 w-6 translate-x-0.5 text-white sm:h-8 sm:w-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </button>
+  );
+}
+
 function Video() {
   const t = useTranslations("Index");
   return (
@@ -198,7 +247,7 @@ function Video() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("video_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -210,15 +259,7 @@ function Video() {
           </p>
         </div>
 
-        <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl" style={{ paddingTop: "56.25%" }}>
-          <iframe
-            className="absolute inset-0 h-full w-full"
-            src="https://www.youtube.com/embed/cJWNJEUY7ug?rel=0&modestbranding=1&cc_load_policy=1"
-            title="Kona Compass in action"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+        <YouTubeFacade />
       </div>
     </section>
   );
@@ -234,7 +275,7 @@ function Pricing() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* Left: text */}
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("pricing_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -254,7 +295,7 @@ function Pricing() {
             <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               {t("pricing_card_heading")}
             </p>
-            <p className="mt-3 text-sm leading-6 text-white/40">
+            <p className="mt-3 text-sm leading-6 text-white/55">
               {t("pricing_spots_note")}
             </p>
 
@@ -264,7 +305,7 @@ function Pricing() {
             >
               {t("pricing_cta")}
             </a>
-            <p className="mt-3 text-center text-xs text-white/45">
+            <p className="mt-3 text-center text-xs text-white/55">
               {t("pricing_hint")}
             </p>
           </div>
@@ -284,7 +325,7 @@ function Compatibility() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("compat_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -308,7 +349,7 @@ function Compatibility() {
                 className="object-contain brightness-0 invert opacity-70"
               />
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/45">Panoptix LiveScope</p>
+            <p className="text-xs uppercase tracking-wider text-white/60">Panoptix LiveScope</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_garmin_models")}
             </p>
@@ -321,7 +362,7 @@ function Compatibility() {
                 Lowrance
               </p>
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/45">ActiveTarget</p>
+            <p className="text-xs uppercase tracking-wider text-white/60">ActiveTarget</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_lowrance_models")}
             </p>
@@ -338,7 +379,7 @@ function Compatibility() {
                 className="object-contain brightness-0 invert opacity-70"
               />
             </div>
-            <p className="text-xs uppercase tracking-wider text-white/45">MEGA Live</p>
+            <p className="text-xs uppercase tracking-wider text-white/60">MEGA Live</p>
             <p className="mt-2 text-sm font-medium text-white/80">
               {t("compat_humminbird_models")}
             </p>
@@ -372,7 +413,7 @@ function Build() {
 
           {/* Content */}
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">
               {t("build_label")}
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
@@ -422,7 +463,7 @@ function FAQ() {
       />
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+          <p className="text-xs uppercase tracking-[0.28em] text-white/60">
             {t("faq_label")}
           </p>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -470,7 +511,7 @@ function BlogTeaser({ locale }: { locale: string }) {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">{c.label}</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-white/60">{c.label}</p>
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">{c.title}</h2>
           </div>
           <Link href={`/${locale}/blog`} className="hidden text-sm text-cyan-400 hover:text-cyan-300 transition sm:block">
@@ -487,7 +528,7 @@ function BlogTeaser({ locale }: { locale: string }) {
             >
               <p className="mb-3 text-xs uppercase tracking-widest text-cyan-400/70">Live Sonar</p>
               <h3 className="text-lg font-semibold text-white leading-snug group-hover:text-cyan-300 transition">{post.h}</h3>
-              <p className="mt-3 text-sm text-white/45 leading-6">{post.excerpt}</p>
+              <p className="mt-3 text-sm text-white/60 leading-6">{post.excerpt}</p>
               <p className="mt-6 text-sm text-cyan-400 group-hover:text-cyan-300 transition">{post.read}</p>
             </Link>
           ))}
@@ -519,18 +560,18 @@ function WaitlistCTA() {
             </p>
             <div className="mt-10">
               <WaitlistForm className="max-w-md" />
-              <p className="mt-4 text-xs text-white/35">{t("waitlist_note")}</p>
+              <p className="mt-4 text-xs text-white/55">{t("waitlist_note")}</p>
             </div>
           </div>
 
           {/* Contacts */}
           <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-10">
-            <p className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-white/40">
+            <p className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
               Direct contact
             </p>
             <div className="space-y-7">
               <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/45">
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/60">
                   Email
                 </p>
                 <a
@@ -541,7 +582,7 @@ function WaitlistCTA() {
                 </a>
               </div>
               <div>
-                <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-white/45">
+                <p className="mb-3 text-[10px] font-bold uppercase tracking-widest text-white/60">
                   Social
                 </p>
                 <SocialIcons />
@@ -566,11 +607,12 @@ function Footer({ locale }: { locale: string }) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-4">
-              <div className="relative h-10 w-14 overflow-hidden rounded-sm bg-white/95">
+              <div className="flex h-10 w-14 items-center justify-center overflow-hidden rounded-sm bg-white/95">
                 <Image
                   src={`${basePath}/konacompas-old/logo.png`}
                   alt="Kona Compass logo"
-                  fill
+                  width={48}
+                  height={32}
                   className="object-contain p-1"
                 />
               </div>
@@ -578,17 +620,17 @@ function Footer({ locale }: { locale: string }) {
                 <p className="text-xs uppercase tracking-[0.28em] text-white/70">
                   {common("product_name")}
                 </p>
-                <p className="mt-0.5 text-sm text-white/40">{common("tagline")}</p>
+                <p className="mt-0.5 text-sm text-white/55">{common("tagline")}</p>
               </div>
             </div>
-            <p className="mt-6 max-w-xs text-sm leading-6 text-white/40">
+            <p className="mt-6 max-w-xs text-sm leading-6 text-white/55">
               {common("footer_desc")}
             </p>
           </div>
 
           {/* Convince me */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/60">
               {common("footer_learn")}
             </p>
             <div className="space-y-3 text-sm text-white/55">
@@ -607,7 +649,7 @@ function Footer({ locale }: { locale: string }) {
 
           {/* Contact */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/60">
               {common("footer_contact")}
             </p>
             <div className="space-y-3 text-sm text-white/55">
@@ -622,7 +664,7 @@ function Footer({ locale }: { locale: string }) {
 
           {/* Legal */}
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/35">
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-white/60">
               {common("footer_legal")}
             </p>
             <div className="space-y-3 text-sm text-white/55">
@@ -651,7 +693,7 @@ function Footer({ locale }: { locale: string }) {
         </div>
 
         <div className="mt-12 border-t border-white/5 pt-8">
-          <p className="text-xs text-white/40">© 2026 Kona Compass. All rights reserved.</p>
+          <p className="text-xs text-white/55">© 2026 Kona Compass. All rights reserved.</p>
         </div>
       </div>
     </footer>

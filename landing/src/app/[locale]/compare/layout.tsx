@@ -23,13 +23,14 @@ export async function generateMetadata(
         description,
         url,
         siteName: "Kona Compass",
-        images: [{ url: ogImage, width: 1200, height: 630 }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass — сравнение ротаторов датчиков" }],
         locale: "ru_RU",
         type: "website",
       },
+      twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
-  const title = "Rotator Comparison | Kona Compass vs Brand Mounts";
+  const title = "Kona Compass vs Manual Mounts | Transducer Rotator Comparison";
   const description = "Compare Kona Compass motorized rotator vs brand mounts and manual poles. Heading hold, multi-platform compatibility, stainless build, auto search.";
   const url = `${siteUrl}/en/compare/`;
   return {
@@ -44,10 +45,11 @@ export async function generateMetadata(
       description,
       url,
       siteName: "Kona Compass",
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass motorized transducer rotator vs manual mounts comparison" }],
       locale: "en_US",
       type: "website",
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

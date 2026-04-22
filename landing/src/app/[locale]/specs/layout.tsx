@@ -23,14 +23,15 @@ export async function generateMetadata(
         description,
         url,
         siteName: "Kona Compass",
-        images: [{ url: ogImage, width: 1200, height: 630 }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass — ротатор датчика live sonar" }],
         locale: "ru_RU",
         type: "website",
       },
+      twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
   const title = "Technical Specifications | Kona Compass Transducer Rotator";
-  const description = "Kona Compass specs: operating modes, rotation speed, scanning range, Garmin / Lowrance / Humminbird compatibility. Contact manufacturer for details.";
+  const description = "Kona Compass specs: operating modes, rotation speed, scanning range, Garmin / Lowrance / Humminbird MEGA Live compatibility. Full control options listed.";
   const url = `${siteUrl}/en/specs/`;
   return {
     title,
@@ -44,10 +45,11 @@ export async function generateMetadata(
       description,
       url,
       siteName: "Kona Compass",
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Kona Compass motorized transducer rotator specifications" }],
       locale: "en_US",
       type: "website",
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

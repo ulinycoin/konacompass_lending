@@ -17,7 +17,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { locale } = await params;
   if (locale === 'ru') {
-    const title = "Kona Compass | Ротатор датчика для Panoptix LiveScope и ActiveTarget";
+    const title = "Ротатор датчика live sonar для Garmin и Lowrance | Kona Compass";
     const description = "Моторизованный ротатор датчика live sonar для Garmin Panoptix LiveScope, Lowrance ActiveTarget и Humminbird MEGA Live. Удержание курса, автопоиск, пульт.";
     const url = `${siteUrl}/ru/`;
     return {
@@ -39,8 +39,8 @@ export async function generateMetadata(
       twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
-  const title = "Kona Compass | Motorized Transducer Rotator for Live Sonar";
-  const description = "Motorized live sonar transducer rotator for Garmin Panoptix LiveScope, Lowrance ActiveTarget & Humminbird MEGA Live. Heading hold, auto search, wireless remote.";
+  const title = "Motorized Transducer Rotator for Live Sonar | Kona Compass";
+  const description = "Motorized transducer rotator for Garmin LiveScope, Lowrance ActiveTarget & Humminbird MEGA Live. Heading hold, auto search, wireless remote. Join the waitlist.";
   const url = `${siteUrl}/en/`;
   return {
     title,

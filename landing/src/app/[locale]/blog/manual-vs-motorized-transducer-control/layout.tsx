@@ -24,10 +24,11 @@ export async function generateMetadata(
         description,
         url,
         siteName: "Kona Compass",
-        images: [{ url: ogImage, width: 1200, height: 630 }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: "Ручное vs моторизованное управление датчиком live sonar" }],
         locale: "ru_RU",
         type: "article",
       },
+      twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     };
   }
   const title = "Manual vs Motorized Transducer Control | Kona Compass";
@@ -45,10 +46,11 @@ export async function generateMetadata(
       description,
       url,
       siteName: "Kona Compass",
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Manual vs Motorized Transducer Control for Live Sonar" }],
       locale: "en_US",
       type: "article",
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
