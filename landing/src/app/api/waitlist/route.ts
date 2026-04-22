@@ -37,76 +37,84 @@ function buildEmailHtml(lang: "en" | "ru"): string {
   }[lang];
 
   return `<!DOCTYPE html>
-<html lang="${lang}">
+<html lang="${lang}" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
   <title>Kona Compass</title>
   <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+  <style>
+    :root { color-scheme: dark; supported-color-schemes: dark; }
+    body { margin: 0; padding: 0; background-color: #07111a !important; }
+  </style>
 </head>
-<body style="margin:0;padding:0;background:#0d1b26;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<body style="margin:0;padding:0;background-color:#07111a;-webkit-text-size-adjust:100%;mso-line-height-rule:exactly;">
 
   <!-- preheader -->
-  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${t.preheader}&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;</div>
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;color:#07111a;">${t.preheader}&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;&nbsp;&#8203;&zwnj;</div>
 
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0d1b26;">
+  <!-- outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#07111a" style="background-color:#07111a;">
     <tr>
-      <td align="center" style="padding:40px 16px 0;">
+      <td align="center" style="padding:48px 16px 48px;">
 
         <!-- card -->
-        <table width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;background:#111f2c;border-radius:6px;overflow:hidden;">
+        <table width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;background-color:#0d1f2d;border:1px solid #1a3040;">
 
-          <!-- top accent bar -->
+          <!-- cyan top bar -->
           <tr>
-            <td style="height:3px;background:linear-gradient(90deg,#06b6d4 0%,#0e7490 100%);font-size:0;line-height:0;">&nbsp;</td>
+            <td height="3" style="background-color:#06b6d4;font-size:0;line-height:0;">&nbsp;</td>
           </tr>
 
-          <!-- header -->
+          <!-- logo -->
           <tr>
-            <td style="padding:36px 40px 28px;">
-              <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td>
-                    <span style="font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#06b6d4;">Kona Compass</span>
-                  </td>
-                  <td align="right">
-                    <span style="font-size:11px;color:#4a6070;letter-spacing:0.08em;text-transform:uppercase;">Pre-launch</span>
-                  </td>
-                </tr>
-              </table>
+            <td align="center" style="padding:36px 40px 28px;background-color:#0d1f2d;">
+              <a href="https://konacompass.com" target="_blank" style="display:inline-block;text-decoration:none;">
+                <img src="https://konacompass.com/branding/logo.png"
+                     alt="Kona Compass"
+                     width="120"
+                     height="120"
+                     style="display:block;border:0;width:120px;height:120px;object-fit:contain;" />
+              </a>
             </td>
           </tr>
 
           <!-- divider -->
           <tr>
-            <td style="padding:0 40px;"><div style="height:1px;background:#1e3040;font-size:0;line-height:0;">&nbsp;</div></td>
+            <td style="padding:0 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td height="1" style="background-color:#1a3040;font-size:0;line-height:0;">&nbsp;</td></tr>
+              </table>
+            </td>
           </tr>
 
           <!-- body -->
           <tr>
-            <td style="padding:36px 40px;">
+            <td style="padding:36px 40px 40px;background-color:#0d1f2d;">
 
-              <h1 style="margin:0 0 20px;font-size:24px;font-weight:700;color:#eef2f0;line-height:1.3;">${t.headline}</h1>
+              <h1 style="margin:0 0 20px;font-size:26px;font-weight:700;color:#eef2f0;line-height:1.25;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${t.headline}</h1>
 
-              <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#8aa4b8;">${t.body1}</p>
+              <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#7a9ab0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${t.body1}</p>
 
-              <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#8aa4b8;">${t.body2}</p>
+              <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#7a9ab0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${t.body2}</p>
 
               <!-- list -->
-              <table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+              <table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 32px;">
                 ${[t.li1, t.li2, t.li3, t.li4].map(item => `
                 <tr>
-                  <td valign="top" style="padding:4px 10px 4px 0;color:#06b6d4;font-size:15px;line-height:1.6;">—</td>
-                  <td valign="top" style="padding:4px 0;font-size:15px;line-height:1.6;color:#8aa4b8;">${item}</td>
+                  <td valign="top" width="20" style="padding:5px 12px 5px 0;color:#06b6d4;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">—</td>
+                  <td valign="top" style="padding:5px 0;font-size:15px;line-height:1.5;color:#7a9ab0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${item}</td>
                 </tr>`).join("")}
               </table>
 
-              <!-- CTA -->
+              <!-- CTA button -->
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="border-radius:4px;background:#06b6d4;">
+                  <td style="background-color:#06b6d4;border-radius:3px;">
                     <a href="https://konacompass.com" target="_blank"
-                       style="display:inline-block;padding:13px 28px;font-size:14px;font-weight:600;color:#07111a;text-decoration:none;letter-spacing:0.03em;">${t.cta}</a>
+                       style="display:inline-block;padding:14px 32px;font-size:14px;font-weight:600;color:#07111a;text-decoration:none;letter-spacing:0.04em;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${t.cta}</a>
                   </td>
                 </tr>
               </table>
@@ -114,13 +122,19 @@ function buildEmailHtml(lang: "en" | "ru"): string {
             </td>
           </tr>
 
-          <!-- footer -->
+          <!-- footer divider -->
           <tr>
-            <td style="padding:0 40px;"><div style="height:1px;background:#1e3040;font-size:0;line-height:0;">&nbsp;</div></td>
+            <td style="padding:0 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td height="1" style="background-color:#1a3040;font-size:0;line-height:0;">&nbsp;</td></tr>
+              </table>
+            </td>
           </tr>
+
+          <!-- footer text -->
           <tr>
-            <td style="padding:24px 40px 32px;">
-              <p style="margin:0;font-size:12px;line-height:1.6;color:#314a5c;">${t.footer}</p>
+            <td style="padding:20px 40px 28px;background-color:#0d1f2d;">
+              <p style="margin:0;font-size:12px;line-height:1.6;color:#2e4a5c;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">${t.footer}</p>
             </td>
           </tr>
 
@@ -128,9 +142,6 @@ function buildEmailHtml(lang: "en" | "ru"): string {
         <!-- /card -->
 
       </td>
-    </tr>
-    <tr>
-      <td style="height:40px;">&nbsp;</td>
     </tr>
   </table>
 
