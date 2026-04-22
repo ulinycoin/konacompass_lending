@@ -160,10 +160,7 @@ export async function POST(req: Request) {
     .from("waitlist")
     .insert({ email, locale: locale || "en" });
 
-  if (error?.code === "23505") {
-    return NextResponse.json({ ok: true });
-  }
-  if (error) {
+  if (error && error.code !== "23505") {
     console.error("Supabase insert error:", error);
     return NextResponse.json({ error: "db_error" }, { status: 500 });
   }
