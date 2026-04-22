@@ -98,12 +98,13 @@ function UnsubscribeContent({ locale }: { locale: "en" | "ru" }) {
   );
 }
 
-export default function UnsubscribePage({
+export default async function UnsubscribePage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale === "ru" ? "ru" : "en";
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale === "ru" ? "ru" : "en";
   return (
     <Suspense>
       <UnsubscribeContent locale={locale} />
