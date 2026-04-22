@@ -11,3 +11,8 @@ agent.md
 # Agent and Codex system
 .agents/
 .codex/
+
+# Claude Code project instructions (internal)
+CLAUDE.md
+.claude/
+cona_compas_instruction.txt
