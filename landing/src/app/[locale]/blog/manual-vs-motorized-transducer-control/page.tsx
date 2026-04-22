@@ -275,7 +275,7 @@ export default function ArticlePage({ params }: { params: Promise<{ locale: stri
       <section className="border-b border-white/5">
         <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8 py-10">
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
-            <Image src={`${basePath}/konacompas-old/image-4.png`} alt={c.imgAlt} fill className="object-cover" priority />
+            <Image src={`${basePath}/konacompas-old/image-4.webp`} alt={c.imgAlt} fill className="object-cover" priority />
           </div>
         </div>
       </section>
@@ -361,7 +361,7 @@ export default function ArticlePage({ params }: { params: Promise<{ locale: stri
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-4">
             <div className="relative h-8 w-10 overflow-hidden rounded-sm bg-white/95">
-              <Image src={`${basePath}/konacompas-old/logo.png`} alt="Kona Compass logo" fill className="object-contain p-1" />
+              <Image src={`${basePath}/konacompas-old/logo.webp`} alt="Kona Compass logo" fill className="object-contain p-1" />
             </div>
             <p className="text-xs uppercase tracking-widest text-white/40">© 2026 Kona Compass</p>
           </div>

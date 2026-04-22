@@ -168,7 +168,7 @@ export default function Compare({
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 aspect-video lg:aspect-square">
               <Image
-                src={`${basePath}/konacompas-old/image-4.png`}
+                src={`${basePath}/konacompas-old/image-4.webp`}
                 alt="Kona Compass live sonar transducer rotator — compatible with Garmin LiveScope, Lowrance ActiveTarget, Humminbird MEGA Live"
                 fill
                 className="object-cover"
@@ -213,7 +213,7 @@ export default function Compare({
           <div className="flex items-center gap-4">
             <div className="relative h-8 w-10 overflow-hidden rounded-sm bg-white/95">
               <Image
-                src={`${basePath}/konacompas-old/logo.png`}
+                src={`${basePath}/konacompas-old/logo.webp`}
                 alt="Kona Compass logo"
                 fill
                 className="object-contain p-1"

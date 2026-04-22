@@ -40,7 +40,7 @@ function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.18),rgba(3,7,18,0.72))]" />
       <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
         <Image
-          src={`${basePath}/konacompas-old/image-3.png`}
+          src={`${basePath}/konacompas-old/image-3.webp`}
           alt="Kona Compass motorized transducer rotator for live sonar — installed on a boat"
           fill
           className="object-cover object-center"
@@ -179,7 +179,7 @@ function HowItWorks() {
           {/* Image */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 lg:aspect-auto lg:h-full lg:min-h-[480px]">
             <Image
-              src={`${basePath}/konacompas-old/image-4.png`}
+              src={`${basePath}/konacompas-old/image-4.webp`}
               alt="Kona Compass transducer rotator — heading hold and auto search modes in operation"
               fill
               className="object-cover"
@@ -403,7 +403,7 @@ function Build() {
           {/* Image */}
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 lg:order-last">
             <Image
-              src={`${basePath}/konacompas-old/image-5.png`}
+              src={`${basePath}/konacompas-old/image-5.webp`}
               alt="Kona Compass hardware detail"
               fill
               className="object-cover"
@@ -609,7 +609,7 @@ function Footer({ locale }: { locale: string }) {
             <div className="flex items-center gap-4">
               <div className="flex h-10 w-14 items-center justify-center overflow-hidden rounded-sm bg-white/95">
                 <Image
-                  src={`${basePath}/konacompas-old/logo.png`}
+                  src={`${basePath}/konacompas-old/logo.webp`}
                   alt="Kona Compass logo"
                   width={48}
                   height={32}

@@ -129,7 +129,7 @@ export default function Header() {
         <Link href={`/${currentLocale}`} className="flex items-center gap-3 group">
           <div className="relative h-10 w-12 overflow-hidden rounded-sm bg-white/95 transition group-hover:bg-white">
             <Image
-              src={`${basePath}/konacompas-old/logo.png`}
+              src={`${basePath}/konacompas-old/logo.webp`}
               alt="Kona Compass logo"
               fill
               className="object-contain p-1"

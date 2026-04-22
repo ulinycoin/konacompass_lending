@@ -96,7 +96,7 @@ export default function InstructionsPage({
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <Image
-              src={`${basePath}/konacompas-old/image-4.png`}
+              src={`${basePath}/konacompas-old/image-4.webp`}
               alt="Kona Compass controls overview"
               fill
               className="object-cover"
@@ -287,7 +287,7 @@ export default function InstructionsPage({
           <div className="flex items-center gap-4">
             <div className="relative h-8 w-10 overflow-hidden rounded-sm bg-white/95">
               <Image
-                src={`${basePath}/konacompas-old/logo.png`}
+                src={`${basePath}/konacompas-old/logo.webp`}
                 alt="Kona Compass logo"
                 fill
                 className="object-contain p-1"
